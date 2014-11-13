@@ -1,5 +1,6 @@
 angular.module( 'ngBoilerplate.home', [
-  'ui.router'
+  'ui.router',
+  'directive.diHeader'
 ])
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'home', {
