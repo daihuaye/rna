@@ -1,6 +1,14 @@
 angular.module( 'ngBoilerplate.home', [
   'ui.router',
-  'directive.diHeader'
+  'directive.diHeader',
+  'directive.diBackstrecth',
+  'directive.diHeroParties',
+  'direcitve.diTimeCountDown',
+  'directive.diParallaxBackground',
+  'directive.diIsotopeGrid',
+  'directive.diRsvpForm',
+  'directive.diJustifiedGallery',
+  'directive.diGmap'
 ])
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'home', {
