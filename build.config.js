@@ -66,7 +66,14 @@ module.exports = {
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
       'vendor/jquery/dist/jquery.min.js',
-      'vendor/bootstrap/dist/js/bootstrap.min.js'
+      'vendor/bootstrap/dist/js/bootstrap.min.js',
+      'vendor/jquery-backstretch/jquery.backstretch.min.js',
+      'vendor/jquery.plugin/jquery.plugin.js',
+      'vendor/jquery.countdown/dist/jquery.countdown.js',
+      'vendor/jquery.parallax/jquery.parallax.js',
+      'vendor/isotope/dist/isotope.pkgd.min.js',
+      'vendor/Justified-Gallery/dist/js/jquery.justifiedGallery.min.js',
+      'vendor/gmap3/dist/gmap3.min.js'
     ],
     css: [
     ],
