@@ -1,20 +1,25 @@
 header {
+  a {
+    display: table;
+    margin: 0 auto;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   .ra-logo-head {
     padding: 30px 0 20px;
   }
   .ra-logo-name {
-    text-align: center;
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
-      line-height: 1;
-      font-size: 40px;
-      font-weight: 700;
-      color: #333;
-      font-family: @logo-font-family;
-    }
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    font-family: @logo-font-family;
   }
   .ra-logo-date {
+    width: 380px;
     text-align: center;
     span {
       font-size: 18px;
@@ -28,15 +33,24 @@ header {
   }
 }
 
-.separator > b {
-  width: 50%;
-}
-
-.separator > b:before {
-  display: block;
-  content: "";
-  background-color: rgba( 0, 0, 0, 0.1 );
-  height: 1px;
+.ra-separator {
+  & > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  & > b {
+    width: 50%;
+    &:before {
+      display: block;
+      content: "";
+      background-color: rgba( 0, 0, 0, 0.1 );
+      height: 1px;
+    }
+  }
+  span {
+    white-space: nowrap;
+    padding: 0 10px;
+  }
 }
 
 #ra-content {
@@ -53,14 +67,6 @@ header {
     height: 748px;
     background: none;
     margin-top: -80px;
-  }
-
-  .ra-hero-container {
-    margin-top: -140px;
-    z-index: 10;
-    position: relative;
-    background-color: transparent;
-    .background-image(linear-gradient(top, rgba(255, 255, 255, 0.9), white 140px));
   }
 
   .ra-parallax-background {
@@ -106,5 +112,43 @@ header {
 
   .googlemap {
     height: 450px;
+  }
+
+  .ra-marry-text {
+    text-align: center;
+    margin-top: 80px;
+  }
+  .ra-text {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    span {
+      color: rgba(220,100,100,1);
+    }
+  }
+
+  .ra-date-separator {
+    font-size: 20px;
+  }
+
+  .ra-quote-text {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  .ra-cite-text {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: -50px;
+  }
+
+  .ra-grey-scheme {
+    background-color: #f9f9f9;
   }
 }
