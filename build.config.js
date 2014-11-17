@@ -66,6 +66,7 @@ module.exports = {
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
       'vendor/jquery/dist/jquery.min.js',
+      'vendor/lodash/dist/lodash.min.js',
       'vendor/bootstrap/dist/js/bootstrap.min.js',
       'vendor/jquery-backstretch/jquery.backstretch.min.js',
       'vendor/jquery.plugin/jquery.plugin.js',
