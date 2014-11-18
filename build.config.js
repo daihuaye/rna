@@ -74,7 +74,9 @@ module.exports = {
       'vendor/jquery.parallax/jquery.parallax.js',
       'vendor/isotope/dist/isotope.pkgd.min.js',
       'vendor/Justified-Gallery/dist/js/jquery.justifiedGallery.min.js',
-      'vendor/gmap3/dist/gmap3.min.js'
+      'vendor/gmap3/dist/gmap3.min.js',
+      'vendor/colorbox/jquery.colorbox.js',
+      'vendor/smoothscroll/smoothscroll.js'
     ],
     css: [
     ],
