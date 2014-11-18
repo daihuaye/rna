@@ -13,6 +13,7 @@
 
 @import '../../vendor/bootstrap/less/bootstrap.less';
 @import '../../vendor/lesshat/build/lesshat.less';
+@import (inline) '../../vendor/Justified-Gallery/dist/css/justifiedGallery.min.css';
 
 /**
  * This is our main variables file. We must include it last so we can overwrite any variable
@@ -80,6 +81,20 @@ body {
   }
 }
 
+.ra-button {
+  font-family: @p-font-family;
+  padding: 10px 20px;
+  background-color: rgba(220,100,100,1);
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid #C55959;
+  font-size: 13px;
+  .border-radius(0);
+  letter-spacing: 2px;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
 
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
@@ -93,6 +108,9 @@ body {
 @import '../common/directives/diHeroParties/diHeroParties.less';
 @import '../common/directives/diTimeCountDown/diTimeCountDown.less';
 @import '../common/directives/diIsotopeGrid/diIsotopeGrid.less';
+@import '../common/directives/diRsvpForm/diRsvpForm.less';
+@import '../common/directives/diJustifiedGallery/diJustifiedGallery.less';
+@import '../common/directives/diBackstrecth/diBackstrecth.less';
 
 @import '../app/home/home.mobile.less';
 @import '../common/directives/diHeader/diHeader.mobile.less';
