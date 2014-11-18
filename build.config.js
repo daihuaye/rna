@@ -76,7 +76,8 @@ module.exports = {
       'vendor/Justified-Gallery/dist/js/jquery.justifiedGallery.min.js',
       'vendor/gmap3/dist/gmap3.min.js',
       'vendor/colorbox/jquery.colorbox.js',
-      'vendor/smoothscroll/smoothscroll.js'
+      'vendor/smooth-scroll.js/dist/js/smooth-scroll.js',
+      'vendor/imagesloaded/imagesloaded.pkgd.min.js'
     ],
     css: [
     ],
