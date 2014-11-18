@@ -22,7 +22,23 @@ function(
         for (var i = 1; i <= 5; i++) {
             scope.images.push(i + '.jpg');
         }
-    };
 
+        $(window).load(function() {
+            $(element).justifiedGallery({
+                lastRow : 'nojustify', 
+                rowHeight : 100, 
+                rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
+                margins : 1
+            }).on('jg.complete', function () {
+                $(this).find('a').colorbox({
+                    maxWidth : '80%',
+                    maxHeight : '80%',
+                    opacity : 0.8,
+                    transition : 'elastic',
+                    current : ''
+                });
+            });
+        });
+    };
     return JustifiedGallery;
 }]);
