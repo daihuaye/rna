@@ -17,33 +17,36 @@ function(
 
     Gmap.link = function link(scope, element, attrs) {
         var fenway = new google.maps.LatLng(37.405201, -122.149572);
+
+        function openMarker(marker, event, context) {
+            var map = $(this).gmap3("get"),
+                infowindow = $(this).gmap3({
+                    get: {
+                        name: "infowindow"
+                    }
+                }),
+                data = "<h5>University Club of Palo Alto</h5>" +
+                        "<p>3277 Miranda Ave Palo Alto, CA 94304</p>" +
+                        "<p>(650) 493-3972</p>";
+            if (infowindow) {
+                infowindow.open(map, marker);
+            } else {
+                $(this).gmap3({
+                    infowindow: {
+                        anchor: marker,
+                        options: {
+                            content: data
+                        }
+                    }
+                });
+            }
+        }
         $(element).gmap3({
             marker: {
                 values: [{latLng: [37.405678, -122.149539]}],
                 events:{
-                    mouseover: function(marker, event, context) {
-                        var map = $(this).gmap3("get"),
-                            infowindow = $(this).gmap3({
-                                get: {
-                                    name: "infowindow"
-                                }
-                            }),
-                            data = "<h5>University Club of Palo Alto</h5>" +
-                                    "<p>3277 Miranda Ave Palo Alto, CA 94304</p>" +
-                                    "<p>(650) 493-3972</p>";
-                        if (infowindow) {
-                            infowindow.open(map, marker);
-                        } else {
-                            $(this).gmap3({
-                                infowindow: {
-                                    anchor: marker,
-                                    options: {
-                                        content: data
-                                    }
-                                }
-                            });
-                        }
-                    }
+                    click: openMarker,
+                    mouseover: openMarker
                 }
             },
             map:{
