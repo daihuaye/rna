@@ -60,7 +60,7 @@ function(
             },
             streetviewpanorama: {
                 options: {
-                    container: $(document.createElement("div")).addClass("googlemap col-md-6").insertAfter($(element)),
+                    container: $(document.createElement("div")).addClass("googlemap col-md-6").attr('id', 'ra-streetview').insertAfter($(element)),
                     opts: {
                         position: fenway,
                         scrollwheel: false,

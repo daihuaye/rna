@@ -29,5 +29,20 @@
                 data-options='{ "easing": "easeInOutCubic" }'
                 href="#ra-location">LOCATION</a>
         </li>
+        <li role="presentation" 
+            class="divider"
+            ng-show="isDevice()"></li>
+        <li>
+            <a data-scroll 
+                data-options='{ "easing": "easeInOutCubic" }'
+                href="#ra-mapview"
+                ng-show="isDevice()">MAP VIEW</a>
+        </li>
+        <li>
+            <a data-scroll 
+                data-options='{ "easing": "easeInOutCubic" }'
+                href="#ra-streetview"
+                ng-show="isDevice()">STREET VIEW</a>
+        </li>
     </ul>
 </div>
