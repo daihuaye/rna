@@ -8,7 +8,8 @@ angular.module( 'ngBoilerplate.home', [
   'directive.diIsotopeGrid',
   'directive.diRsvpForm',
   'directive.diJustifiedGallery',
-  'directive.diGmap'
+  'directive.diGmap',
+  'directive.diScrollTo'
 ])
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'home', {
