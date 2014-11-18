@@ -3,9 +3,13 @@
 *
 * Description
 */
-angular.module('directive.diScrollTo', [])
+angular.module('directive.diScrollTo', [
+    'service.Device'
+])
 .directive('diScrollTo', [
+    'Device',
 function(
+    Device
 ){
     var ScrollTo = {};
 
@@ -17,7 +21,11 @@ function(
 
     ScrollTo.replace = true;
 
-    ScrollTo.link = function link(scope, element, attrs) {};
+    ScrollTo.link = function link(scope, element, attrs) {
+        scope.isDevice = function() {
+            return Device.device;
+        };
+    };
 
     return ScrollTo;
 }]);
