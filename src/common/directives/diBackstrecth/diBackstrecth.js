@@ -3,9 +3,13 @@
 *
 * Description
 */
-angular.module('directive.diBackstrecth', [])
+angular.module('directive.diBackstrecth', [
+    'service.Device'
+])
 .directive('diBackstrecth', [
+    'Device',
 function(
+    Device
 ){
     var Backstrecth = {};
 
@@ -16,11 +20,18 @@ function(
     Backstrecth.replace = true;
 
     Backstrecth.link = function link(scope, element, attrs) {
+
         $(element).backstretch([
-            'https://s3.amazonaws.com/rna.com/hero1.jpg',
-            'https://s3.amazonaws.com/rna.com/hero2.jpg',
-            'https://s3.amazonaws.com/rna.com/hero3.jpg'
-        ], {duration: 3000, fade: 750});
+            'assets/images/hero1.jpg',
+            'assets/images/hero2.jpg',
+            'assets/images/hero3.jpg'
+        ], {duration: 3000, fade: 750, height: 400});
+
+        if (Device.device) {
+            $(element).addClass('ra-mobile-backstretch');
+        } else {
+            $(element).removeClass('ra-mobile-backstretch');
+        }
     };
 
     return Backstrecth;
