@@ -10,7 +10,8 @@ angular.module( 'ngBoilerplate.home', [
   'directive.diRsvpForm',
   'directive.diJustifiedGallery',
   'directive.diGmap',
-  'directive.diScrollTo'
+  'directive.diScrollTo',
+  'service.Device'
 ])
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'home', {
@@ -25,7 +26,22 @@ angular.module( 'ngBoilerplate.home', [
     data:{ pageTitle: 'Home' }
   });
 })
-.controller( 'HomeCtrl', function HomeController( $scope ) {
+.controller( 'HomeCtrl', HomeController);
+
+HomeController.$inject = ['$scope', 'Device'];
+
+function HomeController( $scope, Device ) {
     var vm = this;
-});
+    vm.isDevice = isDevice;
+
+    //////////////
+    
+    function isDevice() {
+        if (Device.device) {
+            return 'col-md-12';
+        } else {
+            return 'col-md-6';
+        }
+    }
+}
 
