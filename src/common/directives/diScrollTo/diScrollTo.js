@@ -4,7 +4,8 @@
 * Description
 */
 angular.module('directive.diScrollTo', [
-    'service.Device'
+    'service.Device',
+    'ngTouch'
 ])
 .directive('diScrollTo', [
     'Device',
