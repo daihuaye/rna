@@ -77,7 +77,8 @@ module.exports = {
       'vendor/gmap3/dist/gmap3.min.js',
       'vendor/colorbox/jquery.colorbox.js',
       'vendor/smooth-scroll.js/dist/js/smooth-scroll.js',
-      'vendor/imagesloaded/imagesloaded.pkgd.min.js'
+      'vendor/imagesloaded/imagesloaded.pkgd.min.js',
+      'vendor/angular-touch/angular-touch.min.js'
     ],
     css: [
     ],
