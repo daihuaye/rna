@@ -1,5 +1,6 @@
 angular.module( 'ngBoilerplate.home', [
   'ui.router',
+  'ngTouch',
   'directive.diHeader',
   'directive.diBackstrecth',
   'directive.diHeroParties',
@@ -17,6 +18,7 @@ angular.module( 'ngBoilerplate.home', [
     views: {
       "main": {
         controller: 'HomeCtrl',
+        controllerAs: 'vm',
         templateUrl: 'home/home.tpl.html'
       }
     },
@@ -24,5 +26,6 @@ angular.module( 'ngBoilerplate.home', [
   });
 })
 .controller( 'HomeCtrl', function HomeController( $scope ) {
+    var vm = this;
 });
 
