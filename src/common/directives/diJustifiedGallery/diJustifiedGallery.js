@@ -31,8 +31,8 @@ function(
                 margins : 1
             }).on('jg.complete', function () {
                 $(this).find('a').colorbox({
-                    maxWidth : '80%',
-                    maxHeight : '80%',
+                    maxWidth : '100%',
+                    maxHeight : '100%',
                     opacity : 0.8,
                     transition : 'elastic',
                     current : ''
