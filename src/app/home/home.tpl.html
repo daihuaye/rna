@@ -42,9 +42,11 @@
                 </div>
             </div>
             <div class="ra-panel ra-widget">
-                <div class="ra-section ra-dark-scheme">
+                <div class="ra-section"
+                    data-ng-class="{'ra-dark-scheme': !vm.isMobile(), 'ra-mobile-parallax-background': vm.isMobile()}">
                     <div class="ra-black-overlay ra-parallax-background"
-                        di-parallax-background></div>
+                        di-parallax-background
+                        data-ng-if="!vm.isMobile()"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
@@ -76,9 +78,11 @@
             </div>
             <div class="ra-panel ra-widget ra-widget-section-rsvp"
                 id="ra-rsvp">
-                <div class="ra-section ra-grey-scheme">
+                <div class="ra-section ra-grey-scheme"
+                    data-ng-class="{'ra-mobile-rsvp-background': vm.isMobile()}">
                     <div class="ra-black-overlay ra-parallax-background"
-                        di-parallax-background>
+                        di-parallax-background 
+                        data-ng-if="!vm.isMobile()">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -111,7 +115,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="ra-js-gmap"
-                                data-ng-class="vm.isDevice()"
+                                data-ng-class="vm.getClassForMapSection()"
                                 id="ra-mapview"
                                 di-gmap>
                             </div>

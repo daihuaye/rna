@@ -32,16 +32,21 @@ HomeController.$inject = ['$scope', 'Device'];
 
 function HomeController( $scope, Device ) {
     var vm = this;
-    vm.isDevice = isDevice;
+    vm.getClassForMapSection = getClassForMapSection;
+    vm.isMobile = isMobile;
 
     //////////////
     
-    function isDevice() {
+    function getClassForMapSection() {
         if (Device.device) {
             return 'col-md-12';
         } else {
             return 'col-md-6';
         }
+    }
+
+    function isMobile() {
+        return Device.device;
     }
 }
 
