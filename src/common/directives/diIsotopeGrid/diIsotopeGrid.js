@@ -24,6 +24,10 @@ function(
                 layoutMode: 'fitRows'
             });
         });
+
+        scope.viewDetails = function viewDetails(event) {
+            event.preventDefault();
+        };
     };
 
     return IsotopeGrid;

@@ -1,7 +1,7 @@
-angular.module( 'ngBoilerplate', [
+angular.module( 'rna', [
   'templates-app',
   'templates-common',
-  'ngBoilerplate.home',
+  'rna.home',
   'ui.router'
 ])
 

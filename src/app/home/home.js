@@ -1,6 +1,7 @@
-angular.module( 'ngBoilerplate.home', [
+angular.module( 'rna.home', [
   'ui.router',
   'ngTouch',
+  'firebase',
   'directive.diHeader',
   'directive.diBackstrecth',
   'directive.diHeroParties',
@@ -36,7 +37,7 @@ function HomeController( $scope, Device ) {
     vm.isMobile = isMobile;
 
     //////////////
-    
+
     function getClassForMapSection() {
         if (Device.device) {
             return 'col-md-12';
