@@ -14,15 +14,14 @@ function (HomeModel) {
     vm.submitRsvp = submitRsvp;
 
     vm.rsvp = {
-        firstName: 'Chao',
-        lastName: 'Jin',
-        email: 'chaojin@gmail.com',
-        numberOfadults: 2,
-        numberOfChild: 3
+        firstName: '',
+        lastName: '',
+        email: '',
+        numberOfadults: 0,
+        numberOfChild: 0
     };
 
     function submitRsvp() {
-        console.log(vm.rsvp);
         HomeModel
         .rsvp(vm.rsvp)
         .then(function(data) {

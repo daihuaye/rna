@@ -4,10 +4,22 @@
 * Description
 */
 angular.module('directive.diJustifiedGallery', [])
+.controller('JustifiedGalleryCtrl', ['$scope', function($scope) {
+    var vm = this;
+    vm.images = [];
+
+    for (var i = 1; i <= 5; i++) {
+        vm.images.push(i + '.jpg');
+    }
+}])
 .directive('diJustifiedGallery', [
 function(
 ){
     var JustifiedGallery = {};
+
+    JustifiedGallery.controller = 'JustifiedGalleryCtrl';
+
+    JustifiedGallery.controllerAs = 'vm';
 
     JustifiedGallery.templateUrl = 'directives/diJustifiedGallery/diJustifiedGallery.tpl.html';
 
@@ -18,11 +30,6 @@ function(
     JustifiedGallery.replace = true;
 
     JustifiedGallery.link = function link(scope, element, attrs) {
-        scope.images = [];
-        for (var i = 1; i <= 5; i++) {
-            scope.images.push(i + '.jpg');
-        }
-
         $(window).load(function() {
             $(element).justifiedGallery({
                 lastRow : 'nojustify', 

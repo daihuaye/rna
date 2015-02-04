@@ -18,13 +18,6 @@ function(
     IsotopeGrid.replace = true;
 
     IsotopeGrid.link = function link(scope, element, attrs) {
-        $(window).load(function() {
-            $(element).isotope({
-                itemSelector: '.ra-type-event',
-                layoutMode: 'fitRows'
-            });
-        });
-
         scope.viewDetails = function viewDetails(event) {
             event.preventDefault();
         };

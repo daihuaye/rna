@@ -74,7 +74,6 @@ module.exports = {
       'vendor/jquery.plugin/jquery.plugin.js',
       'vendor/jquery.countdown/dist/jquery.countdown.js',
       'vendor/jquery.parallax/jquery.parallax.js',
-      'vendor/isotope/dist/isotope.pkgd.min.js',
       'vendor/Justified-Gallery/dist/js/jquery.justifiedGallery.min.js',
       'vendor/gmap3/dist/gmap3.min.js',
       'vendor/colorbox/jquery.colorbox.js',
