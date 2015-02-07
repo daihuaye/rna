@@ -23,6 +23,22 @@
 
   </head>
   <body>
-    <div ui-view="main"></div>
+  <header id="ra-top">
+      <div class="ra-logo-head container">
+          <a href="#">
+              <div class="ra-logo-name">
+                  Raymond + Anna
+              </div>
+              <div class="ra-logo-date ra-separator">
+                  <b></b>
+                  <span>2015.10.10</span>
+                  <b></b>
+              </div>
+          </a>
+      </div>
+      <div di-header class="di-header"></div>
+  </header>
+    <div ui-view="main"
+      data-ng-class="getState()"></div>
   </body>
 </html>

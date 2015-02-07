@@ -5,7 +5,9 @@
 */
 angular.module('directive.diHeader', [])
 .directive('diHeader', [
+    '$state',
 function(
+    $state
 ){
     var Header = {};
     
@@ -15,7 +17,11 @@ function(
 
     Header.scope = true;
 
-    Header.link = function link(scope, element, attrs) {};
+    Header.link = function link(scope, element, attrs) {
+        scope.isCoupleState = function() {
+            return $state.current.name === 'couple';
+        };
+    };
 
     return Header;
 }]);

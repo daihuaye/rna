@@ -14,7 +14,8 @@
         };
 
         return {
-            rsvp: rsvp
+            rsvp: rsvp,
+            getGalleryNum: getGalleryNum
         };
 
         ////////////////
@@ -34,6 +35,10 @@
 
             }
             return deferred.promise;
+        }
+
+        function getGalleryNum() {
+            return 5;
         }
     }
 

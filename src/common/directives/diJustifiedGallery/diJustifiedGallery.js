@@ -4,17 +4,33 @@
 * Description
 */
 angular.module('directive.diJustifiedGallery', [])
-.controller('JustifiedGalleryCtrl', ['$scope', function($scope) {
+.controller('JustifiedGalleryCtrl', function($scope, JustifiedGalleryModel) {
     var vm = this;
     vm.images = [];
 
-    for (var i = 1; i <= 5; i++) {
+    for (var i = 1; i <= JustifiedGalleryModel.photoNum(); i++) {
         vm.images.push(i + '.jpg');
     }
-}])
-.directive('diJustifiedGallery', [
-function(
-){
+
+    ////////////
+
+})
+.factory('JustifiedGalleryModel', function() {
+    var numOfPhotos = 0;
+    return {
+        photoNum: photoNum
+    };
+
+    ///////////////
+
+    function photoNum(options) {
+        if (angular.isDefined(options)) {
+            numOfPhotos = options;
+        }
+        return numOfPhotos;
+    }
+})
+.directive('diJustifiedGallery', function($timeout){
     var JustifiedGallery = {};
 
     JustifiedGallery.controller = 'JustifiedGalleryCtrl';
@@ -30,10 +46,16 @@ function(
     JustifiedGallery.replace = true;
 
     JustifiedGallery.link = function link(scope, element, attrs) {
-        $(window).load(function() {
+        $timeout(function() {
+            $(element).waitForImages(loadGallery);
+        });
+
+        //////////
+
+        function loadGallery() {
             $(element).justifiedGallery({
-                lastRow : 'nojustify', 
-                rowHeight : 100, 
+                lastRow : 'nojustify',
+                rowHeight : 200,
                 rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
                 margins : 1
             }).on('jg.complete', function () {
@@ -45,7 +67,7 @@ function(
                     current : ''
                 });
             });
-        });
+        }
     };
     return JustifiedGallery;
-}]);
+});

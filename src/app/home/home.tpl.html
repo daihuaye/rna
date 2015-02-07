@@ -1,18 +1,3 @@
-<header id="ra-top">
-    <div class="ra-logo-head container">
-        <a href="#">
-            <div class="ra-logo-name">
-                Raymond + Anna
-            </div>
-            <div class="ra-logo-date ra-separator">
-                <b></b>
-                <span>2015.10.10</span>
-                <b></b>
-            </div>
-        </a>
-    </div>
-    <div di-header class="di-header"></div>
-</header>
 <section id="ra-content">
     <div class="ra-panel-grid">
         <div class="ra-panel-grid-cell">
@@ -43,10 +28,10 @@
             </div>
             <div class="ra-panel ra-widget">
                 <div class="ra-section"
-                    data-ng-class="{'ra-dark-scheme': !vm.isMobile(), 'ra-mobile-parallax-background': vm.isMobile()}">
+                    data-ng-class="{'ra-dark-scheme': !home.isMobile(), 'ra-mobile-parallax-background': home.isMobile()}">
                     <div class="ra-black-overlay ra-parallax-background"
                         di-parallax-background
-                        data-ng-if="!vm.isMobile()"></div>
+                        data-ng-if="!home.isMobile()"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
@@ -79,10 +64,10 @@
             <div class="ra-panel ra-widget ra-widget-section-rsvp"
                 id="ra-rsvp">
                 <div class="ra-section ra-grey-scheme"
-                    data-ng-class="{'ra-mobile-rsvp-background': vm.isMobile()}">
+                    data-ng-class="{'ra-mobile-rsvp-background': home.isMobile()}">
                     <div class="ra-black-overlay ra-parallax-background"
                         di-parallax-background
-                        data-ng-if="!vm.isMobile()">
+                        data-ng-if="!home.isMobile()">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -115,7 +100,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="ra-js-gmap"
-                                data-ng-class="vm.getClassForMapSection()"
+                                data-ng-class="home.getClassForMapSection()"
                                 id="ra-mapview"
                                 di-gmap>
                             </div>
