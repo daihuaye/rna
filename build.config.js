@@ -65,7 +65,7 @@ module.exports = {
       'vendor/angular/angular.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
-      'vendor/jquery/jquery.min.js',
+      'vendor/jquery/dist/jquery.min.js',
       'vendor/firebase/firebase.js',
       'vendor/angularfire/dist/angularfire.min.js',
       'vendor/lodash/dist/lodash.min.js',
@@ -79,7 +79,8 @@ module.exports = {
       'vendor/colorbox/jquery.colorbox.js',
       'vendor/smooth-scroll.js/dist/js/smooth-scroll.js',
       'vendor/imagesloaded/imagesloaded.pkgd.min.js',
-      'vendor/angular-touch/angular-touch.min.js'
+      'vendor/angular-touch/angular-touch.min.js',
+      'vendor/waitForImages/dist/jquery.waitforimages.min.js'
     ],
     css: [
     ],
