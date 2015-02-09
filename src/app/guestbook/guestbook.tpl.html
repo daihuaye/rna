@@ -1,0 +1,61 @@
+
+<div class="ra-guestbook-title"
+    data-ng-class="{'ra-dark-scheme': !guestbook.isMobile(), 'ra-mobile-parallax-background': guestbook.isMobile()}">
+    <div class="ra-black-overlay ra-parallax-background"
+        di-parallax-background
+        data-ng-if="!guestbook.isMobile()"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <a href="">
+                    <div class="ra-quote-text">
+                        GUESTBOOK
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="ra-guestbook">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="ra-content">
+                    <p>We would love you to sign your name and perhaps you will write a line or two which we can always remember forever. After our wedding day has passed, our memories will always last. For when we look, we will be sure to see loving words from our friends and family.</p>
+                </div>
+                <form class="ra-guestbook-form"
+                    name="guestbookForm"
+                    ng-submit="guestbook.addMessage(guestbookForm.$valid)"
+                    novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            ng-model="guestbook.message.name"
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea name="message"
+                            class="form-control"
+                            cols="25"
+                            rows="9"
+                            ng-model="guestbook.message.message"
+                            placeholder="Enter your message"
+                            required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="btn ra-button">Add Message</button>
+                </form>
+                <div class="list-guestbook-entries">
+                    <guest-message
+                        ng-repeat="m in guestbook.messages | reverse"
+                        message="{{m.message}}"
+                        name="{{m.name}}"></guest-message>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
