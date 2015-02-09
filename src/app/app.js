@@ -5,7 +5,10 @@ angular.module('rna', [
     'ui.router',
     'rna.couple',
     'rna.gallery',
-    'directive.diHeader'
+    'directive.diHeader',
+    'directive.diFooter',
+    'rna.guestbook',
+    'rna.guestbook.model'
 ])
 
 .run(function run() {})
