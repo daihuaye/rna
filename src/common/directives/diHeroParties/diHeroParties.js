@@ -8,7 +8,7 @@ angular.module('directive.diHeroParties', [])
 function(
 ){
     var HeroParties = {};
-    
+
     HeroParties.templateUrl = 'directives/diHeroParties/diHeroParties.tpl.html';
 
     HeroParties.restrict = 'A';
