@@ -32,6 +32,28 @@
             }
         })
 
+        .state('guestbook', {
+            url: '/guestbook',
+            views: {
+                'main': {
+                    controller: 'GuestbookCtrl',
+                    controllerAs: 'guestbook',
+                    templateUrl: 'guestbook/guestbook.tpl.html'
+                }
+            },
+            resolve: {
+                messages: function(GuestbookModel) {
+                    return GuestbookModel
+                            .guest()
+                            .then(function(data) {
+                                return data;
+                            }, function() {
+                                return [];
+                            });
+                }
+            }
+        })
+
         .state('gallery', {
             url: '/gallery',
             views: {
