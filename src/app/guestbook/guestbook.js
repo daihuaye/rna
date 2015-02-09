@@ -6,11 +6,12 @@
             'directive.diParallaxBackground',
             'rna.guestbook.guestMessage',
             'rna.guestbook.model',
-            'rna.filters.reverse'
+            'rna.filters.reverse',
+            'service.Device'
         ])
         .controller('GuestbookCtrl', GuestbookCtrl);
 
-    function GuestbookCtrl(GuestbookModel, messages) {
+    function GuestbookCtrl(GuestbookModel, messages, Device) {
         var vm = this;
         vm.isMobile = isMobile;
         vm.addMessage = addMessage;
@@ -23,7 +24,7 @@
         //////////////
 
         function isMobile() {
-            return false;
+            return Device.device;
         }
 
         function addMessage(valid) {
