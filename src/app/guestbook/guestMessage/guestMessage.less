@@ -1,0 +1,42 @@
+.ra-guest-message {
+    .ra-separator {
+        & > b {
+            width: 50%;
+            &:before {
+                content: "";
+                display: block;
+                background-color: #eeeeee;
+                background-color: rgba( 0, 0, 0, 0.1 );
+                height: 1px;
+            }
+        }
+        & > * {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        & > span {
+            white-space: nowrap;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        span {
+            color: rgba(0,0,0,0.2);
+            font-size: 24px;
+        }
+    }
+    .ra-guestbook-message {
+        font-size: 16px;
+        font-style: italic;
+        line-height: 1.5em;
+        text-align: center;
+    }
+
+    .ra-guestbook-name {
+        font-size: 12px;
+        color: rgba(0,0,0,0.3);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
