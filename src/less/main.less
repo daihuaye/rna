@@ -23,6 +23,8 @@
 
 @import 'variables.less';
 
+@import 'mixins.less';
+
 
 /**
  * Typography
@@ -58,6 +60,10 @@
 
 body {
   font-family: @logo-font-family;
+  background-color: #f3f3f3;
+}
+header {
+  background-color: white;
 }
 
 .ra-title {
@@ -106,7 +112,9 @@ body {
 
 @import '../app/home/home.less';
 @import '../app/couple/couple.less';
+@import '../app/gallery/gallery.less';
 @import '../app/app.less';
+@import '../app/guestbook/guestbook.less';
 
 @import '../common/directives/diHeader/diHeader.less';
 @import '../common/directives/diHeroParties/diHeroParties.less';
@@ -117,6 +125,8 @@ body {
 @import '../common/directives/diScrollTo/diScrollTo.less';
 @import '../common/directives/diIsotopeGrid/diIsotopeGrid.less';
 @import '../common/directives/diGmap/diGmap.less';
+@import '../common/directives/diFooter/diFooter.less';
+@import '../app/guestbook/guestMessage/guestMessage.less';
 
 @import '../app/home/home.mobile.less';
 @import '../common/directives/diHeader/diHeader.mobile.less';
