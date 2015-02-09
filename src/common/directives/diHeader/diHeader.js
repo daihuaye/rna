@@ -10,7 +10,7 @@ function(
     $state
 ){
     var Header = {};
-    
+
     Header.templateUrl = 'directives/diHeader/diHeader.tpl.html';
 
     Header.restrict = 'A';
