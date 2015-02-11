@@ -3,12 +3,10 @@
 *
 * Description
 */
-angular.module('directive.diHeader', [])
-.directive('diHeader', [
-    '$state',
-function(
-    $state
-){
+angular.module('directive.diHeader', [
+    'pascalprecht.translate'
+])
+.directive('diHeader', function( $state, $translate ){
     var Header = {};
 
     Header.templateUrl = 'directives/diHeader/diHeader.tpl.html';
@@ -21,7 +19,15 @@ function(
         scope.isCoupleState = function() {
             return $state.current.name === 'couple';
         };
+
+        scope.use = function(langulage) {
+            $translate.use(langulage);
+        };
+
+        scope.isUseCN = function() {
+            return $translate.use() === 'cn';
+        };
     };
 
     return Header;
-}]);
+});

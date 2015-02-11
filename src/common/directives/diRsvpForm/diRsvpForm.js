@@ -5,7 +5,8 @@
 */
 angular
 .module('directive.diRsvpForm', [
-    'rna.home.model'
+    'rna.home.model',
+    'pascalprecht.translate'
 ])
 .controller('RsvpCtrl', [
     'HomeModel',

@@ -3,19 +3,19 @@
         SIGN YOUR RSVP
     </div>
     <div class="form-group">
-        <label for="ra-full-name">FIRST NAME (名)</label>
+        <label for="ra-full-name">{{'F_NAME' | translate}}</label>
         <input type="text" class="form-control" id="ra-full-name" ng-model="vm.rsvp.firstName" placeholder="Enter your first name">
     </div>
     <div class="form-group">
-        <label for="ra-full-name">LAST NAME (姓)</label>
+        <label for="ra-full-name">{{'L_NAME' | translate}}</label>
         <input type="text" class="form-control" id="ra-full-name" ng-model="vm.rsvp.lastName" placeholder="Enter your last name">
     </div>
     <div class="form-group">
-        <label for="ra-email-address">EMAIL ADDRESS (电子邮件)</label>
+        <label for="ra-email-address">{{'EMAIL' | translate}}</label>
         <input type="email" class="form-control" id="ra-email-address" ng-model="vm.rsvp.email" placeholder="Enter email">
     </div>
     <div class="form-group">
-        <label for="ra-full-name">NUMBER OF ADULTS (成年数量)</label>
+        <label for="ra-full-name">{{ 'NUM_ADULT' | translate }}</label>
         <select class="form-control" ng-model="vm.rsvp.numberOfadults">
             <option>1</option>
             <option>2</option>
@@ -25,7 +25,7 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="ra-full-name">NUMBER OF CHILD (小孩数量)</label>
+        <label for="ra-full-name">{{ 'NUM_CHILD' | translate }}</label>
         <select class="form-control" ng-model="vm.rsvp.numberOfChild">
             <option>0</option>
             <option>1</option>

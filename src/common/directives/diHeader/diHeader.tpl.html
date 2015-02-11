@@ -9,9 +9,10 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-header">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav"
+                ng-class="{'ra-cn-header': isUseCN()}">
                 <li class="active" ui-sref-active="active">
-                    <a ui-sref="home">HOME</a>
+                    <a ui-sref="home">{{'HOME' | translate}}</a>
                 </li>
                 <li class="dropdown"
                     ng-class="{ 'active': isCoupleState() }">
@@ -20,18 +21,27 @@
                         class="dropdown-toggle"
                         data-toggle="dropdown"
                         role="button"
-                        aria-expanded="false">THE COUPLE
+                        aria-expanded="false">{{'COUPLE' | translate}}
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a ui-sref="couple({who: 'groom'})">THE GROOM</a></li>
-                        <li><a ui-sref="couple({who: 'bride'})">THE BRIDE</a></li>
+                        <li><a ui-sref="couple({who: 'groom'})">{{'GROOM' | translate}}</a></li>
+                        <li><a ui-sref="couple({who: 'bride'})">{{'BRIDE' | translate}}</a></li>
                     </ul>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="gallery">GALLERY</a>
+                    <a ui-sref="gallery">{{'GALLERY' | translate}}</a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="guestbook">GUESTBOOK</a>
+                    <a ui-sref="guestbook">{{'GUESTBOOK' | translate}}</a>
+                </li>
+                <li>
+                    <a href=""
+                        ng-click="use('cn')"
+                        ng-class="ra-chinese"
+                        ng-show="!isUseCN()">中文</a>
+                    <a href=""
+                        ng-click="use('en')"
+                        ng-show="isUseCN()">En</a>
                 </li>
             </ul>
         </div>

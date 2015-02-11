@@ -22,7 +22,7 @@ module.exports = {
   app_files: {
     js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
     jsunit: [ 'src/**/*.spec.js' ],
-    
+
     coffee: [ 'src/**/*.coffee', '!src/**/*.spec.coffee' ],
     coffeeunit: [ 'src/**/*.spec.coffee' ],
 
@@ -80,7 +80,9 @@ module.exports = {
       'vendor/smooth-scroll.js/dist/js/smooth-scroll.js',
       'vendor/imagesloaded/imagesloaded.pkgd.min.js',
       'vendor/angular-touch/angular-touch.min.js',
-      'vendor/waitForImages/dist/jquery.waitforimages.min.js'
+      'vendor/waitForImages/dist/jquery.waitforimages.min.js',
+      'vendor/angular-translate/angular-translate.min.js',
+      'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js'
     ],
     css: [
     ],

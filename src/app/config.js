@@ -5,7 +5,17 @@
         .module('rna')
         .config(config);
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider, $translateProvider) {
+        // langulage
+        $translateProvider
+        .useStaticFilesLoader({
+            prefix: '/assets/',
+            suffix: '.json'
+        });
+
+        $translateProvider.preferredLanguage('en');
+
+        // url
         $stateProvider
         .state('home', {
             url: '/home',

@@ -8,7 +8,8 @@ angular.module('rna', [
     'directive.diHeader',
     'directive.diFooter',
     'rna.guestbook',
-    'rna.guestbook.model'
+    'rna.guestbook.model',
+    'pascalprecht.translate'
 ])
 
 .run(function run() {})
