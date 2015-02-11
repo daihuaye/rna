@@ -1,6 +1,6 @@
 <form name="rsvp-form" class="ra-rsvp-form" novalidate ng-submit="vm.submitRsvp()">
     <div class="ra-title">
-        SIGN YOUR RSVP
+        {{'RSVP_HEADER' | translate}}
     </div>
     <div class="form-group">
         <label for="ra-full-name">{{'F_NAME' | translate}}</label>
@@ -35,5 +35,5 @@
             <option>5</option>
         </select>
     </div>
-    <input type="submit" class="ra-rsvp-submit btn ra-button" value="I'M ATTENDING">
+    <input type="submit" class="ra-rsvp-submit btn ra-button" value="{{'ATTENDING' | translate }}">
 </form>

@@ -37,11 +37,10 @@
                 <li>
                     <a href=""
                         ng-click="use('cn')"
-                        ng-class="ra-chinese"
-                        ng-show="!isUseCN()">中文</a>
+                        ng-show="!isUseCN()">{{'LAN' | translate}}</a>
                     <a href=""
                         ng-click="use('en')"
-                        ng-show="isUseCN()">En</a>
+                        ng-show="isUseCN()">{{'LAN' | translate}}</a>
                 </li>
             </ul>
         </div>
