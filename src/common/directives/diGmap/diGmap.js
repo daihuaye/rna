@@ -23,7 +23,7 @@ function(
         var fenway = new google.maps.LatLng(37.405201, -122.149572),
             markerOption = {
                 marker: {
-                    values: [{latLng: [37.405678, -122.149539]}],
+                    values: [{latLng: [37.406109, -122.148778]}],
                     events:{
                         click: openMarker,
                         mouseover: openMarker
@@ -71,7 +71,7 @@ function(
                 }),
                 data = "<h5>University Club of Palo Alto</h5>" +
                         "<p><a href='http://goo.gl/0oJqRs' target='_blank'>3277 Miranda Ave Palo Alto, CA 94304</a></p>" +
-                        "<p>(650) 493-3972</p>";
+                        "<p><a href='tel:+1-650-493-3972'>(650) 493-3972</a></p>";
             if (infowindow) {
                 infowindow.open(map, marker);
             } else {

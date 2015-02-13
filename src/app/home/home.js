@@ -6,20 +6,20 @@ angular.module('rna.home', [
     'directive.diHeroParties',
     'direcitve.diTimeCountDown',
     'directive.diParallaxBackground',
-    'directive.diIsotopeGrid',
+    'directive.events',
     'directive.diRsvpForm',
-    'directive.diJustifiedGallery',
+    'directive.moments',
     'directive.diGmap',
     'directive.diScrollTo',
     'service.Device'
 ])
 .controller('HomeCtrl', HomeController);
 
-function HomeController($scope, Device, JustifiedGalleryModel) {
+function HomeController($scope, Device, MomentsModel) {
     var vm = this;
     vm.getClassForMapSection = getClassForMapSection;
     vm.isMobile = isMobile;
-    JustifiedGalleryModel.photoNum(5);
+    MomentsModel.photoNum(5);
 
     //////////////
 

@@ -82,7 +82,8 @@ module.exports = {
       'vendor/angular-touch/angular-touch.min.js',
       'vendor/waitForImages/dist/jquery.waitforimages.min.js',
       'vendor/angular-translate/angular-translate.min.js',
-      'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js'
+      'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
+      'vendor/ngstorage/ngStorage.min.js'
     ],
     css: [
     ],

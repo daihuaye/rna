@@ -9,7 +9,8 @@ angular.module('rna', [
     'directive.diFooter',
     'rna.guestbook',
     'rna.guestbook.model',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ngStorage'
 ])
 
 .run(function run() {})

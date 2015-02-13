@@ -31,6 +31,11 @@
     "LOCATION": "我们的婚礼地点",
     "TOP": "顶",
     "ATTENDING": "我要参加",
-    "WEDDING_PARTY": "婚礼宴会",
-    "WEDDING_CEREMONY": "婚礼典礼"
+    "WEDDING_PARTY": "婚礼派对",
+    "WEDDING_CEREMONY": "婚礼典礼",
+    "Parking": "免费停车",
+    "QUOTE": "相亲相爱幸福永，同德同心幸福长",
+    "f_name_ph": "请输入你的名",
+    "l_name_ph": "请输入你的姓",
+    "email_ph": "请输入你的邮件"
 }

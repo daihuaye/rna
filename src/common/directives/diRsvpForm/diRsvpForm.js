@@ -8,9 +8,7 @@ angular
     'rna.home.model',
     'pascalprecht.translate'
 ])
-.controller('RsvpCtrl', [
-    'HomeModel',
-function (HomeModel) {
+.controller('RsvpCtrl', function (HomeModel) {
     var vm = this;
     vm.submitRsvp = submitRsvp;
 
@@ -29,25 +27,20 @@ function (HomeModel) {
         }, function(data) {
         });
     }
-}])
+})
 .directive('diRsvpForm', [
 function(
 ){
-    var RsvpForm = {};
+    return {
+        templateUrl: 'directives/diRsvpForm/diRsvpForm.tpl.html',
+        restrict: 'AE',
+        controller: 'RsvpCtrl',
+        controllerAs: 'vm',
+        scope: true,
+        replace; true,
+        link: link
+    };
 
-    RsvpForm.templateUrl = 'directives/diRsvpForm/diRsvpForm.tpl.html';
-
-    RsvpForm.restrict = 'A';
-
-    RsvpForm.controller = 'RsvpCtrl';
-
-    RsvpForm.controllerAs = 'vm';
-
-    RsvpForm.scope = true;
-
-    RsvpForm.replace = true;
-
-    RsvpForm.link = function link(scope, element, attrs) {};
-
-    return RsvpForm;
+    function link(scope, element, attrs) {
+    }
 }]);

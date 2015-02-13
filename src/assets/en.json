@@ -23,14 +23,19 @@
     "M": "MIN",
     "S": "SEC",
     "DY": "Daihua Ye",
-    "JW": "Anna Wan",
+    "JW": "Jiashunzi Wan",
     "LAN": "中文",
     "EVENT": "THE EVENTS",
     "RSVP_HEADER": "SIGN YOUR RSVP",
-    "MOMENT": "PRECIOUS MOMENTS",
+    "MOMENT": "UNFORGETTABLE MOMENTS",
     "LOCATION": "OUR WEDDING LOCATION",
     "TOP": "TOP",
     "ATTENDING": "I'M ATTENDING",
     "WEDDING_PARTY": "WEDDING PARTY",
-    "WEDDING_CEREMONY": "WEDDING CEREMONY"
+    "WEDDING_CEREMONY": "WEDDING CEREMONY",
+    "Parking": "FREE PARKING",
+    "QUOTE": "Love is old, love is new, Love is all, love is you!",
+    "f_name_ph": "Enter your first name",
+    "l_name_ph": "Enter your last name",
+    "email_ph": "Enter email"
 }

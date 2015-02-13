@@ -3,13 +3,13 @@
 
     angular
         .module('rna.gallery', [
-            'directive.diJustifiedGallery'
+            'directive.moments'
         ])
         .controller('GalleryCtrl', GalleryCtrl);
 
-    function GalleryCtrl($state, JustifiedGalleryModel) {
+    function GalleryCtrl($state, MomentsModel) {
         var vm = this;
-        JustifiedGalleryModel.photoNum(5);
+        MomentsModel.photoNum(5);
 
         ///////////////
     }

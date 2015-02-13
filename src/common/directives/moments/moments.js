@@ -1,21 +1,21 @@
 /**
-* directive.diJustifiedGallery Module
+* directive.moments Module
 *
 * Description
 */
-angular.module('directive.diJustifiedGallery', [])
-.controller('JustifiedGalleryCtrl', function($scope, JustifiedGalleryModel) {
+angular.module('directive.moments', [])
+.controller('MomentsCtrl', function($scope, MomentsModel) {
     var vm = this;
     vm.images = [];
 
-    for (var i = 1; i <= JustifiedGalleryModel.photoNum(); i++) {
+    for (var i = 1; i <= MomentsModel.photoNum(); i++) {
         vm.images.push(i + '.jpg');
     }
 
     ////////////
 
 })
-.factory('JustifiedGalleryModel', function() {
+.factory('MomentsModel', function() {
     var numOfPhotos = 0;
     return {
         photoNum: photoNum
@@ -30,22 +30,20 @@ angular.module('directive.diJustifiedGallery', [])
         return numOfPhotos;
     }
 })
-.directive('diJustifiedGallery', function($timeout){
-    var JustifiedGallery = {};
+.directive('moments', function($timeout){
+    return {
+        controller: 'MomentsCtrl',
+        controllerAs: 'vm',
+        templateUrl: 'directives/moments/moments.tpl.html',
+        restrict: 'AE',
+        scope: true,
+        replace: true,
+        link: link
+    };
 
-    JustifiedGallery.controller = 'JustifiedGalleryCtrl';
+    //////////
 
-    JustifiedGallery.controllerAs = 'vm';
-
-    JustifiedGallery.templateUrl = 'directives/diJustifiedGallery/diJustifiedGallery.tpl.html';
-
-    JustifiedGallery.restrict = 'A';
-
-    JustifiedGallery.scope = true;
-
-    JustifiedGallery.replace = true;
-
-    JustifiedGallery.link = function link(scope, element, attrs) {
+    function link(scope, element, attrs) {
         $timeout(function() {
             $(element).waitForImages(loadGallery);
         });
@@ -68,6 +66,5 @@ angular.module('directive.diJustifiedGallery', [])
                 });
             });
         }
-    };
-    return JustifiedGallery;
+    }
 });
