@@ -37,7 +37,7 @@ function(
         controller: 'RsvpCtrl',
         controllerAs: 'vm',
         scope: true,
-        replace; true,
+        replace: true,
         link: link
     };
 
