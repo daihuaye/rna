@@ -29,9 +29,9 @@
                 <div class="ra-section"
                     data-ng-class="{'ra-dark-scheme': !home.isMobile(), 'ra-mobile-parallax-background': home.isMobile()}">
                     <div class="ra-black-overlay ra-parallax-background"
-                        di-parallax-background
-                        data-ng-if="!home.isMobile()"></div>
-                    <div class="container">
+                        parallax-scroll
+                        url="assets/images/wedding-quote.jpg"></div>
+                    <div class="container ra-quote-div">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="ra-quote-text">
@@ -58,13 +58,13 @@
             </div>
             <div class="ra-panel ra-widget ra-widget-section-rsvp"
                 id="ra-rsvp">
-                <div class="ra-section ra-grey-scheme"
+                <div class="ra-section"
                     data-ng-class="{'ra-mobile-rsvp-background': home.isMobile()}">
                     <div class="ra-black-overlay ra-parallax-background"
-                        di-parallax-background
-                        data-ng-if="!home.isMobile()">
-                    </div>
-                    <div class="container">
+                       parallax-scroll
+                       style="home.rsvpStyle"
+                       url="assets/images/rsvp-bg.jpg"></div>
+                    <div class="container ra-rsvp-section">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <div di-rsvp-form></div>

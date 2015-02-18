@@ -1,16 +1,14 @@
 .ra-guestbook-title {
     position: relative;
     .ra-parallax-background {
-        background: url(images/hero2.jpg) 50% 0 no-repeat fixed;
         .parallax-background();
+        z-index: 10;
     }
-    &.ra-mobile-parallax-background {
-        background: url(images/hero2.jpg) no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        color: white;
+    .ra-guestbook-title {
+      position: absolute;
+      width: 100%;
+      top: 20px;
+      z-index: 23;
     }
     a {
         margin: 0 auto;

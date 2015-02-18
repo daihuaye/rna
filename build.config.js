@@ -73,7 +73,6 @@ module.exports = {
       'vendor/jquery-backstretch/jquery.backstretch.min.js',
       'vendor/jquery.plugin/jquery.plugin.js',
       'vendor/jquery.countdown/dist/jquery.countdown.js',
-      'vendor/jquery.parallax/jquery.parallax.js',
       'vendor/Justified-Gallery/dist/js/jquery.justifiedGallery.min.js',
       'vendor/gmap3/dist/gmap3.min.js',
       'vendor/colorbox/jquery.colorbox.js',
@@ -83,7 +82,8 @@ module.exports = {
       'vendor/waitForImages/dist/jquery.waitforimages.min.js',
       'vendor/angular-translate/angular-translate.min.js',
       'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
-      'vendor/ngstorage/ngStorage.min.js'
+      'vendor/ngstorage/ngStorage.min.js',
+      'vendor/angular-parallax-scroll/dist/angular-parallax-scroll.min.js'
     ],
     css: [
     ],

@@ -70,42 +70,17 @@ header {
   }
 
   .ra-parallax-background {
-    background: url(images/wedding-quote.jpg) 50% 0 no-repeat fixed;
     .parallax-background();
   }
 
-  .ra-mobile-parallax-background {
-    background: url(images/hero1.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-  }
-  
-  .ra-mobile-rsvp-background {
-    background: url(images/rsvp-bg.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
   .ra-widget-section-rsvp {
-    .ra-parallax-background {
-      background: url(images/rsvp-bg.jpg) 50% 0 no-repeat fixed;
-    }
+      background: url() fixed;
   }
 
   .ra-panel {
     .ra-section {
       padding: 80px 0;
     }
-  }
-
-  .ra-dark-scheme {
-    color: white;
-    background-color: #111;
   }
 
   .ra-js-gmap {
@@ -122,7 +97,6 @@ header {
   }
   .ra-text {
     display: inline-block;
-    // font-weight: 700;
     font-size: 42px;
     margin-bottom: 30px;
     line-height: 1.2;
@@ -138,12 +112,20 @@ header {
 
   .ra-quote-text {
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 700;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 60px;
+    color: white;
   }
 
+  .ra-quote-div {
+    position: absolute;
+    top: 200px;
+  }
+  .ra-rsvp-section {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
   .ra-cite-text {
     text-align: center;
     font-weight: 400;

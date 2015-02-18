@@ -5,13 +5,13 @@ angular.module('rna.home', [
     'directive.diBackstrecth',
     'directive.diHeroParties',
     'direcitve.diTimeCountDown',
-    'directive.diParallaxBackground',
     'directive.events',
     'directive.diRsvpForm',
     'directive.moments',
     'directive.diGmap',
     'directive.diScrollTo',
-    'service.Device'
+    'service.Device',
+    'angular.parallaxScroll'
 ])
 .controller('HomeCtrl', HomeController);
 
@@ -19,6 +19,9 @@ function HomeController($scope, Device, MomentsModel) {
     var vm = this;
     vm.getClassForMapSection = getClassForMapSection;
     vm.isMobile = isMobile;
+    vm.rsvpStyle = {
+        'height': '700px'
+    };
     MomentsModel.photoNum(5);
 
     //////////////

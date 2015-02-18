@@ -3,11 +3,11 @@
 
     angular
         .module('rna.guestbook', [
-            'directive.diParallaxBackground',
             'rna.guestbook.guestMessage',
             'rna.guestbook.model',
             'rna.filters.reverse',
-            'service.Device'
+            'service.Device',
+            'angular.parallaxScroll'
         ])
         .controller('GuestbookCtrl', GuestbookCtrl);
 
@@ -18,6 +18,9 @@
         vm.message = {
             name: '',
             message: ''
+        },
+        vm.titleStyle = {
+            'height': '250px'
         },
         vm.messages = messages;
 
