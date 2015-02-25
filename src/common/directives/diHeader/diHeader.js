@@ -44,6 +44,10 @@ angular.module('directive.diHeader', [
         scope.isUseCN = function() {
             return $translate.use() === 'cn';
         };
+
+        scope.$on('$stateChangeSuccess', function() {
+            $('#navbar-collapse-header').collapse('hide');
+        });
     };
 
     return Header;
