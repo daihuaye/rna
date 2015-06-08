@@ -2,7 +2,7 @@
 <div class="ra-guestbook-title">
     <div class="ra-black-overlay ra-parallax-background"
         parallax-scroll
-        url="assets/images/hero2.jpg"
+        url="assets/images/guestbook.jpg"
         style="guestbook.titleStyle"></div>
     <div class="container ra-guestbook-title">
         <div class="row">
@@ -21,14 +21,16 @@
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="ra-content">
-                    <p>We would love you to sign your name and perhaps you will write a line or two which we can always remember forever. After our wedding day has passed, our memories will always last. For when we look, we will be sure to see loving words from our friends and family.</p>
+                    <p>
+                        {{ 'GUESTBOOK_INTRO' | translate }}
+                    </p>
                 </div>
                 <form class="ra-guestbook-form"
                     name="guestbookForm"
                     ng-submit="guestbook.addMessage(guestbookForm.$valid)"
                     novalidate>
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">{{'NAME' | translate}}</label>
                         <input
                             ng-model="guestbook.message.name"
                             type="text"
@@ -37,7 +39,7 @@
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Your message</label>
+                        <label for="message">{{'YOUR_MESSAGE' | translate}}</label>
                         <textarea name="message"
                             class="form-control"
                             cols="25"
@@ -47,7 +49,7 @@
                             required></textarea>
                     </div>
                     <button type="submit"
-                        class="btn ra-button">Add Message</button>
+                        class="btn ra-button">{{'ADD_MESSAGE' | translate}}</button>
                 </form>
                 <div class="list-guestbook-entries">
                     <guest-message
