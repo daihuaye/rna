@@ -27,11 +27,12 @@ function HomeController($scope, Device, MomentsModel) {
     //////////////
 
     function getClassForMapSection() {
-        if (Device.device) {
-            return 'col-md-12';
-        } else {
-            return 'col-md-6';
-        }
+        // if (Device.device) {
+        //     return 'col-md-12';
+        // } else {
+        //     return 'col-md-6';
+        // }
+        return 'col-md-12';
     }
 
     function isMobile() {

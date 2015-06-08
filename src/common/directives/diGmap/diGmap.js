@@ -35,7 +35,7 @@ function(
                     options: {
                         zoom: 17,
                         mapTypeId: google.maps.MapTypeId.ROADMAP,
-                        streetViewControl: !Device.device,
+                        // streetViewControl: !Device.device,
                         center: fenway,
                         scrollwheel: false
                     }
@@ -86,7 +86,7 @@ function(
             }
         }
 
-        angular.extend(gmap3Option, markerOption, mapOption, (!Device.device ? getStreeViewOption() : {}));
+        angular.extend(gmap3Option, markerOption, mapOption, {});
         $(element).gmap3(gmap3Option);
     };
 
