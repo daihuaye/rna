@@ -20,6 +20,8 @@ function(
     ScrollTo.replace = true;
 
     ScrollTo.link = function link(scope, element, attrs) {
+        // use smooth scroll here
+        // https://github.com/cferdinandi/smooth-scroll
     };
 
     return ScrollTo;
