@@ -22,7 +22,7 @@ function HomeController($scope, Device, MomentsModel) {
     vm.rsvpStyle = {
         'height': '700px'
     };
-    MomentsModel.photoNum(5);
+    MomentsModel.photoNum(10);
 
     //////////////
 

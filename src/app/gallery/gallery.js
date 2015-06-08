@@ -9,7 +9,7 @@
 
     function GalleryCtrl($state, MomentsModel) {
         var vm = this;
-        MomentsModel.photoNum(5);
+        MomentsModel.photoNum(10);
 
         ///////////////
     }
