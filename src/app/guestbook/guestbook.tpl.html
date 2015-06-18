@@ -51,12 +51,12 @@
                     <button type="submit"
                         class="btn ra-button">{{'ADD_MESSAGE' | translate}}</button>
                 </form>
-                <div class="list-guestbook-entries">
+                <ul class="list-guestbook-entries">
                     <guest-message
                         ng-repeat="m in guestbook.messages | reverse"
                         message="{{m.message}}"
                         name="{{m.name}}"></guest-message>
-                </div>
+                </ul>
             </div>
         </div>
     </div>
