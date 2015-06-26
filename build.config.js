@@ -84,7 +84,9 @@ module.exports = {
       'vendor/angular-translate/angular-translate.min.js',
       'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
       'vendor/ngstorage/ngStorage.min.js',
-      'vendor/angular-parallax-scroll/dist/angular-parallax-scroll.min.js'
+      'vendor/angular-parallax-scroll/dist/angular-parallax-scroll.min.js',
+      'vendor/velocity/velocity.min.js',
+      'vendor/velocity/velocity.ui.min.js'
     ],
     css: [
     ],

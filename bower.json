@@ -26,7 +26,8 @@
     "angular-translate-loader-static-files": "~2.6.0",
     "ngstorage": "~0.3.0",
     "materialize": "~0.95.2",
-    "angular-parallax-scroll": "~1.0.0"
+    "angular-parallax-scroll": "~1.0.0",
+    "velocity": "~1.2.2"
   },
   "dependencies": {}
 }
