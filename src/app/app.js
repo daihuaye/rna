@@ -16,7 +16,6 @@ angular.module('rna', [
 .run(function run() {})
 
 .controller('AppCtrl', function AppCtrl($scope, $location, $state) {
-    smoothScroll.init();
 
     $scope.getState = function getState() {
         return $state.current.name;
