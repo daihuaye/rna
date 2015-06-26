@@ -8,6 +8,7 @@
         var isShow = false;
         vm.isShowAlert = isShowAlert;
         vm.message = 'success';
+        vm.errorMessage = '';
 
         //////////////
 
@@ -16,8 +17,9 @@
             toggleShow();
         });
 
-        $scope.$on('notification.failure', function (data) {
+        $scope.$on('notification.failure', function (event, data) {
             vm.message = 'fail';
+            vm.errorMessage = data;
             toggleShow();
         });
 
@@ -29,7 +31,7 @@
             isShow = true;
             $timeout(function () {
                 isShow = false;
-            }, 5000);
+            }, 10000);
         }
     }
 
