@@ -1,89 +1,84 @@
 .ra-guest-message {
-    position: relative;
-    // padding: 20px 0;
-    // .ra-separator {
-    //     & > b {
-    //         width: 50%;
-    //         &:before {
-    //             content: "";
-    //             display: block;
-    //             background-color: #eeeeee;
-    //             background-color: rgba( 0, 0, 0, 0.1 );
-    //             height: 1px;
-    //         }
-    //     }
-    //     & > * {
-    //         display: table-cell;
-    //         vertical-align: middle;
-    //     }
-    //     & > span {
-    //         white-space: nowrap;
-    //         padding-left: 10px;
-    //         padding-right: 10px;
-    //     }
-    //     span {
-    //         color: rgba(0,0,0,0.2);
-    //         font-size: 24px;
-    //     }
-    // }
-    // .ra-guestbook-message {
-    //     font-size: 16px;
-    //     font-style: italic;
-    //     line-height: 1.5em;
-    //     text-align: center;
-    // }
+  .box-sizing(border-box);
+  position: relative;
+  padding: 25px 0;
+  .ra-separator {
+      & > b {
+          box-sizing: border-box;
+          width: 50%;
+          &:before {
+              content: "";
+              display: block;
+              background-color: #eeeeee;
+              background-color: rgba( 0, 0, 0, 0.1 );
+              height: 1px;
+          }
+      }
+      & > * {
+          display: table-cell;
+          vertical-align: middle;
+      }
+      & > span {
+          white-space: nowrap;
+          padding-left: 10px;
+          padding-right: 10px;
+      }
+      span {
+          color: rgba(0,0,0,0.2);
+          font-size: 24px;
+      }
+  }
+  .ra-guestbook-message {
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.5em;
+      text-align: center;
+      padding-top: 2em;
+  }
 
-    // .ra-guestbook-name {
-    //     font-size: 12px;
-    //     color: rgba(0,0,0,0.3);
-    //     font-weight: bold;
-    //     text-transform: uppercase;
-    //     text-align: center;
-    //     letter-spacing: 1px;
-    // }
+  .ra-guestbook-name {
+      font-size: 12px;
+      color: rgba(0,0,0,0.3);
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1px;
+  }
 }
 
-
-.ra-guestbook-entry {
-    display: block;
-    min-height: 8em;
-    padding: 1.5em 1em;
-    border: 1px solid #f2e187;
-    margin: 0 0px 30px 0;
-    background: #F7ECB5;
-    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.27),0 0 40px rgba(0,0,0,0.06) inset;
-    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.27),0 0 40px rgba(0,0,0,0.06) inset;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.27),0 0 40px rgba(0,0,0,0.06) inset;
-    text-decoration: none;
-    color: #4A4A4A
+.ra-flower-center:before {
+  line-height: 45px;
+  color: rgba(0,0,0,0.2);
+  content: 'Z';
+  font-family: 'font-fleurons';
+  font-size: 2.6em;
 }
 
-.ra-guestbook-entry:before,.ra-guestbook-entry:after {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    left: 10px;
-    bottom: 15px;
-    width: 70%;
-    max-width: 300px;
-    max-height: 100px;
-    height: 55%;
-    -webkit-box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    -webkit-transform: skew(-15deg) rotate(-6deg);
-    -moz-transform: skew(-15deg) rotate(-6deg);
-    -ms-transform: skew(-15deg) rotate(-6deg);
-    -o-transform: skew(-15deg) rotate(-6deg);
-    transform: skew(-15deg) rotate(-6deg)
+.ra-footer-left:before {
+  line-height: 10px;
+  color: rgba(0,0,0,0.2);
+  content: 'M';
+  font-family: 'Rough-Fleurons';
+  font-size: 5em;
 }
 
-.ra-guestbook-entry:after {
-    left: auto;
-    right: 10px;
-    -webkit-transform: skew(15deg) rotate(6deg);
-    -moz-transform: skew(15deg) rotate(6deg);
-    -ms-transform: skew(15deg) rotate(6deg);
-    -o-transform: skew(15deg) rotate(6deg);
-    transform: skew(15deg) rotate(6deg)
+.ra-footer-right:before {
+  line-height: 10px;
+  color: rgba(0,0,0,0.2);
+  content: 'L';
+  font-family: 'Rough-Fleurons';
+  font-size: 5em;
+}
+
+.ra-guestbook-center {
+  position: absolute;
+  left: 50%;
+  margin-left: -2em;
+  &:before {
+    line-height: 10px;
+    color: rgba(0,0,0,0.2);
+    content: '8';
+    font-family: 'font-fleurons';
+    font-size: 4em;
+    display: table-cell;
+  }
 }
