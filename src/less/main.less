@@ -25,6 +25,8 @@
 
 @import 'mixins.less';
 
+@import '../app/guestbook/guestMessage/loading.less';
+
 
 /**
  * Typography
@@ -48,6 +50,18 @@
 @font-face {
   font-family: 'font-chinese-bold';
   src: url('../assets/fonts/NotoSansCJKsc-Bold.otf');
+}
+
+@font-face {
+  font-family: 'font-fleurons';
+  font-style: normal;
+  src: url('../assets/fonts/fleurons.woff');
+}
+
+@font-face {
+  font-family: 'Rough-Fleurons';
+  font-style: normal;
+  src: url('../assets/fonts/Rough-Fleurons.otf');
 }
 
 /* latin-ext */
@@ -82,7 +96,6 @@ header {
 
 .ra-title {
   font-size: 30px;
-  // font-weight: 800;
   text-align: center;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -114,12 +127,15 @@ header {
   letter-spacing: 2px;
   color: white;
   transition: all 0.3s ease-out;
+  &:active, &:focus {
+    color: white;
+  }
 }
 
 
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
- * all the submodules and components we are using. 
+ * all the submodules and components we are using.
  *
  * TODO: In a later version of this boilerplate, I'd like to automate this.
  */
