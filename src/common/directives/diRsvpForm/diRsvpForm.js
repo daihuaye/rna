@@ -30,7 +30,7 @@ angular
             HomeModel
                 .rsvp(vm.rsvp)
                 .then(function(data) {
-                    $scope.$emit('rsvp.submitSuccess');
+                    $scope.$emit('rsvp.submitSuccess', data);
                 }, function(data) {
                     $scope.$emit('rsvp.submitFailure', data);
                 });

@@ -3,7 +3,14 @@
         {{'RSVP_HEADER' | translate}}
     </div>
     <div class="form-group">
-        <label for="ra-full-name">{{'F_NAME' | translate}}</label>
+        <label for="ra-full-name">
+            {{'F_NAME' | translate}}
+            <div class="error-messages"
+            ng-if="vm.interacted(rsvp_form.first_name)"
+            ng-messages="rsvp_form.first_name.$error">
+            <div ng-message="required">{{ 'l_name_err' | translate }}</div>
+        </div>
+        </label>
         <input type="text"
             class="form-control"
             id="ra-full-name"
@@ -11,14 +18,16 @@
             ng-model="vm.rsvp.firstName"
             placeholder="{{'f_name_ph' | translate}}"
             required>
-        <div class="error-messages"
-            ng-if="vm.interacted(rsvp_form.first_name)"
-            ng-messages="rsvp_form.first_name.$error">
-            <div ng-message="required">{{ 'l_name_err' | translate }}</div>
-        </div>
     </div>
     <div class="form-group">
-        <label for="ra-full-name">{{'L_NAME' | translate}}</label>
+        <label for="ra-full-name">
+            {{'L_NAME' | translate}}
+            <div class="error-messages"
+                ng-if="vm.interacted(rsvp_form.last_name)"
+                ng-messages="rsvp_form.last_name.$error">
+                <div ng-message="required">{{ 'f_name_err' | translate }}</div>
+            </div>
+        </label>
         <input type="text"
             class="form-control"
             name="last_name"
@@ -26,14 +35,17 @@
             ng-model="vm.rsvp.lastName"
             placeholder="{{'l_name_ph' | translate}}"
             required>
-        <div class="error-messages"
-            ng-if="vm.interacted(rsvp_form.last_name)"
-            ng-messages="rsvp_form.last_name.$error">
-            <div ng-message="required">{{ 'f_name_err' | translate }}</div>
-        </div>
     </div>
     <div class="form-group">
-        <label for="ra-email-address">{{'EMAIL' | translate}}</label>
+        <label for="ra-email-address">
+            {{'EMAIL' | translate}}
+            <div class="error-messages"
+                ng-if="vm.interacted(rsvp_form.email_address)"
+                ng-messages="rsvp_form.email_address.$error">
+                <div ng-message="required">{{ 'email_err' | translate }}</div>
+                <div ng-message="email">{{ 'email_format_err' | translate }}</div>
+            </div>
+        </label>
         <input type="email"
             class="form-control"
             id="ra-email-address"
@@ -41,12 +53,6 @@
             ng-model="vm.rsvp.email"
             placeholder="{{'email_ph' | translate}}"
             required>
-        <div class="error-messages"
-            ng-if="vm.interacted(rsvp_form.email_address)"
-            ng-messages="rsvp_form.email_address.$error">
-            <div ng-message="required">{{ 'email_err' | translate }}</div>
-            <div ng-message="email">{{ 'email_format_err' | translate }}</div>
-        </div>
     </div>
     <div class="form-group">
         <label for="ra-full-name">{{ 'NUM_ADULT' | translate }}</label>
