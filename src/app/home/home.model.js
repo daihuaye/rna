@@ -50,7 +50,7 @@
                 if (error) {
                     switch (error.code) {
                         case "EMAIL_TAKEN":
-                            defer.reject("The new user account cannot be created because the email is already in use.");
+                            defer.reject("The email is already in use.");
                             break;
                         case "INVALID_EMAIL":
                             defer.reject("The specified email is not a valid email.");
@@ -59,7 +59,7 @@
                             defer.reject("Error creating user:", error);
                     }
                 } else {
-                    defer.resolve("Successfully created user account with uid:", userData.uid);
+                    defer.resolve("Good News! We will send you summary of event detail and notification when the event is comming!");
                 }
             });
             return defer.promise;

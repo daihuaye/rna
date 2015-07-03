@@ -10,6 +10,7 @@ angular.module('rna.home', [
     'directive.moments',
     'directive.diGmap',
     'directive.diScrollTo',
+    'directive.diNotification',
     'service.Device',
     'angular.parallaxScroll'
 ])
@@ -23,6 +24,14 @@ function HomeController($scope, Device, MomentsModel) {
         'height': '700px'
     };
     MomentsModel.photoNum(10);
+
+    $scope.$on('rsvp.submitSuccess', function (event, data) {
+        $scope.$broadcast('notification.success', data);
+    });
+
+    $scope.$on('rsvp.submitFailure', function (event, data) {
+        $scope.$broadcast('notification.failure', data);
+    });
 
     //////////////
 
