@@ -26,22 +26,40 @@
                     </p>
                 </div>
                 <form class="ra-guestbook-form"
-                    name="guestbookForm"
-                    ng-submit="guestbook.addMessage(guestbookForm.$valid)"
+                    name="guestbook_form"
+                    ng-submit="guestbook.addMessage(guestbook_form.$valid)"
+                    data-ng-class="{'ra-guestbook-form__submitting': guestbook.isSubmitting()}"
+                    data-ng-if="!guestbook.isSuccess()"
                     novalidate>
                     <div class="form-group">
-                        <label for="name">{{'NAME' | translate}}</label>
+                        <label for="name">
+                            {{'NAME' | translate}}
+                            <div class="error-messages"
+                                ng-if="guestbook.interacted(guestbook_form.guest_name)"
+                                ng-messages="guestbook_form.guest_name.$error">
+                                <div ng-message="required">{{ "name_err" | translate }}</div>
+                            </div>
+                        </label>
                         <input
                             ng-model="guestbook.message.name"
                             type="text"
+                            name="guest_name"
                             class="form-control"
                             placeholder="Enter name"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="message">{{'YOUR_MESSAGE' | translate}}</label>
-                        <textarea name="message"
+                        <label for="message">
+                            {{'YOUR_MESSAGE' | translate}}
+                            <div class="error-messages"
+                                ng-if="guestbook.interacted(guestbook_form.message_textarea)"
+                                ng-messages="guestbook_form.message_textarea.$error">
+                                <div ng-message="required">{{ "message_err" | translate }}</div>
+                            </div>
+                        </label>
+                        <textarea
                             class="form-control"
+                            name="message_textarea"
                             cols="25"
                             rows="9"
                             ng-model="guestbook.message.message"
@@ -49,18 +67,27 @@
                             required></textarea>
                     </div>
                     <button type="submit"
-                        class="btn ra-button">{{'ADD_MESSAGE' | translate}}</button>
+                        class="btn ra-button"
+                        data-ng-disabled="!(guestbook_form.guest_name.$dirty && guestbook_form.message_textarea.$dirty)">{{'ADD_MESSAGE' | translate}}</button>
+                    <div data-ng-class="{'loader': guestbook.isSubmitting()}"></div>
                 </form>
-                <!-- <ul class="list-guestbook-entries"> -->
+                <div class="ra-guestbook-message__question"
+                    data-ng-if="guestbook.isSuccess()">
+                    <h3 class="ra-guestbook-message__center">Thank you!</h3>
+                    <h4 class="ra-guestbook-message__center">Have more to say?</h4>
+                    <button class="ra-guestbook-message__resent-button btn ra-button" 
+                        data-ng-click="guestbook.resend()">Resend</button>
+                </div>
                 <div class="row">
                     <guest-message
                         ng-repeat="m in guestbook.messages | reverse"
                         data-index="{{$index}}"
                         message="{{m.message}}"
+                        class="ra-guest-message-list"
                         name="{{m.name}}"></guest-message>
                 </div>
-                <!-- </ul> -->
             </div>
         </div>
     </div>
+    <di-notification></di-notification>
 </section>

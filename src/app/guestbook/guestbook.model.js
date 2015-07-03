@@ -19,12 +19,15 @@
 
         function guest(options) {
             var deferred = $q.defer(),
-                guestURL = url + 'guest.json';
+                guestURL = url + 'guest.json',
+                message = {};
             if (angular.isDefined(options)) {
                 $http
                     .post(guestURL, options)
                     .success(function(data) {
-                        deferred.resolve(data);
+                        message['key'] = data.name;
+                        message['value'] = options;
+                        deferred.resolve(message);
                     })
                     .error(function(data) {
                         deferred.reject(data);

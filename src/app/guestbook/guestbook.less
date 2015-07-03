@@ -36,13 +36,14 @@
         margin-bottom: 40px;
     }
     .ra-guestbook-form {
-        padding-top: 20px;
-        border-top: 1px solid #eee;
-        margin-bottom: 30px;
-        input,
-        textarea {
-            font-family: 'Open Sans', sans-serif;
-        }
+      position: relative;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      margin-bottom: 30px;
+      input,
+      textarea {
+          font-family: 'Open Sans', sans-serif;
+      }
     }
     .ra-button {
         width: 100%;
@@ -54,4 +55,34 @@
         margin: 0 0 60px 0;
         padding: 0
     }
+    .error-messages {
+      color: #dc6464;
+      display: inline-block;
+    }
+    .ra-guestbook-form__submitting {
+      visibility: hidden;
+    }
+    .ra-guestbook-message__resent-button {
+      display: block;
+      width: 20%;
+      margin: 0 auto;
+      min-width: 100px;
+    }
+
+}
+
+.ra-guestbook-message__question {
+  padding-bottom: 2em;
+}
+
+.ra-guestbook-message__center {
+  text-align: center;
+}
+
+.ra-guest-message.ng-enter {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: bounceInRight;
 }
