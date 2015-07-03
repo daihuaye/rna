@@ -9,11 +9,13 @@
         vm.isShowAlert = isShowAlert;
         vm.message = 'success';
         vm.errorMessage = '';
+        vm.successMessage = '';
 
         //////////////
 
-        $scope.$on('notification.success', function () {
+        $scope.$on('notification.success', function (event, data) {
             vm.message = 'success';
+            vm.successMessage = data;
             toggleShow();
         });
 
