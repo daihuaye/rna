@@ -85,7 +85,8 @@ module.exports = {
       'vendor/ngstorage/ngStorage.min.js',
       'vendor/angular-parallax-scroll/dist/angular-parallax-scroll.min.js',
       'vendor/velocity/velocity.min.js',
-      'vendor/velocity/velocity.ui.min.js'
+      'vendor/velocity/velocity.ui.min.js',
+      'vendor/angular-animate/angular-animate.min.js'
     ],
     css: [
     ],
