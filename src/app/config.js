@@ -50,17 +50,6 @@
                     controllerAs: 'guestbook',
                     templateUrl: 'guestbook/guestbook.tpl.html'
                 }
-            },
-            resolve: {
-                messages: function(GuestbookModel) {
-                    return GuestbookModel
-                            .guest()
-                            .then(function(data) {
-                                return data;
-                            }, function() {
-                                return [];
-                            });
-                }
             }
         })
 
