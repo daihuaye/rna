@@ -7,7 +7,7 @@ Installation
 ----
 ```sh
 $ git clone https://github.com/davishacker/rna.git
-$ cd ngTetris
+$ cd rna
 $ sudo npm -g install grunt-cli karma bower
 $ npm install
 $ bower install
