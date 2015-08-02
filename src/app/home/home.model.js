@@ -30,7 +30,7 @@
                     var rsvpURL = url + 'rsvp.json';
                     $http
                         .post(rsvpURL, options)
-                        .success(function(data) {
+                        .success(function() {
                             deferred.resolve(data);
                         })
                         .error(function(data) {

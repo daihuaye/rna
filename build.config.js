@@ -83,10 +83,12 @@ module.exports = {
       'vendor/angular-translate/angular-translate.min.js',
       'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
       'vendor/ngstorage/ngStorage.min.js',
-      'vendor/angular-parallax-scroll/dist/angular-parallax-scroll.min.js',
+      'vendor/angular-parallax-scroll/dist/angular-parallax-scroll.js',
       'vendor/velocity/velocity.min.js',
       'vendor/velocity/velocity.ui.min.js',
-      'vendor/angular-animate/angular-animate.min.js'
+      'vendor/angular-animate/angular-animate.min.js',
+      'vendor/angulartics/dist/angulartics.min.js',
+      'vendor/angulartics-google-analytics/dist/angulartics-google-analytics.min.js'
     ],
     css: [
     ],

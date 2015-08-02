@@ -5,12 +5,15 @@ angular.module('rna', [
     'ui.router',
     'rna.couple',
     'rna.gallery',
+    'rna.wishlist',
     'directive.diHeader',
     'directive.diFooter',
     'rna.guestbook',
     'rna.guestbook.model',
     'pascalprecht.translate',
-    'ngStorage'
+    'ngStorage',
+    'angulartics',
+    'angulartics.google.analytics'
 ])
 
 .run(function run() {})

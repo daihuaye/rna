@@ -9,7 +9,7 @@ angular
     'ngMessages',
     'pascalprecht.translate'
 ])
-.controller('RsvpCtrl', function(HomeModel, $scope) {
+.controller('RsvpCtrl', function(HomeModel, $scope, $analytics) {
     var vm = this;
     vm.submitRsvp = submitRsvp;
     vm.interacted = interacted;
@@ -30,8 +30,10 @@ angular
             HomeModel
                 .rsvp(vm.rsvp)
                 .then(function(data) {
+                    $analytics.eventTrack('rsvp.submit', { category: 'rsvp.success', label: 'success'});
                     $scope.$emit('rsvp.submitSuccess', data);
                 }, function(data) {
+                    $analytics.eventTrack('rsvp.submit', { category: 'rsvp.failure', label: data});
                     $scope.$emit('rsvp.submitFailure', data);
                 });
         }

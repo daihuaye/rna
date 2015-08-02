@@ -62,6 +62,17 @@
                     templateUrl: 'gallery/gallery.tpl.html'
                 }
             }
+        })
+
+        .state('wishlist', {
+            url: '/wishlist',
+            views: {
+                'main': {
+                    controller: 'WishlistCtrl',
+                    controllerAs: 'wishlist',
+                    templateUrl: 'wishlist/wishlist.tpl.html'
+                }
+            }
         });
         $urlRouterProvider.otherwise('/home');
     }

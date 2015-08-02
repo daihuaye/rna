@@ -26,7 +26,7 @@ function(
             'assets/images/home-sliding-images/sliding2.jpg',
             'assets/images/home-sliding-images/sliding3.jpg',
             'assets/images/home-sliding-images/sliding4.jpg'
-        ], {duration: 3000, fade: 750, height: 400});
+        ], {duration: 3000, fade: 750, centeredY: false});
 
         if (Device.device) {
             $(element).addClass('ra-mobile-backstretch');

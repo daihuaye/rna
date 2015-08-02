@@ -3,6 +3,7 @@
     "COUPLE": "THE COUPLE",
     "GALLERY": "GALLERY",
     "GUESTBOOK": "GUESTBOOK",
+    "WISHLIST": "WISHLIST",
     "GROOM": "THE GROOM",
     "BRIDE": "THE BRIDE",
     "F_NAME": "FIRST NAME",
@@ -48,8 +49,8 @@
     "email_format_err": "(You have entered an incorrect email)",
     "email_ph": "Enter email",
     "INTO_RAY": "Came from China, immigrated to US in 2007. First son of marriage in my family. Celebrate my wedding here in US.",
-    "INTO_ANNA": "Single child in the family. Immigrated to US in 2006. With my fifth aunt and uncle's great help, graudated from CSULB. A girl hates liars, who is also down to earth and very much Optimist.",
-    "WEDDING_PARTY_DETAIL": "Welcome to come and join our wedding party. There is an OPEN BAR here for you who want a drink. Please feel free to enjory the food and drink in your convenient. The dinner is buffet with meat and vergitable. More detail will be provided in future.",
-    "WEDDING_CEREMONY_DETAIL": "Welcome to my wedding ceremony. Here, we will present the moment of true love in form of wedding ceremony. Please arrive early if you want to attend.",
+    "INTO_ANNA": "Single child in the family. Immigrated to US in 2006. With my fifth aunt and uncle's great help, graudated from CSULB.",
+    "WEDDING_PARTY_DETAIL": "Welcome to join our wedding party. The dinner is buffet style. More detail will be provided in the future.",
+    "WEDDING_CEREMONY_DETAIL": "Welcome to my wedding ceremony. Here, we will present the moment of true love in form of wedding ceremony. Please arrive early.",
     "GUESTBOOK_INTRO": "We would love you to sign your name and perhaps you will write a line or two which we can always remember forever. After our wedding day has passed, our memories will always last. For when we look, we will be sure to see loving words from our friends and family."
 }

@@ -1,14 +1,14 @@
 /**
-* directive.events Module
+* directive.wish Module
 *
 * Description
 */
-angular.module('directive.events', [])
-.directive('events', [
+angular.module('rna.wishlist.wish', [])
+.directive('wish', [
 function(
 ){
     return {
-        templateUrl: 'directives/events/events.tpl.html',
+        templateUrl: 'wishlist/wish/wish.tpl.html',
         restrict: 'AE',
         scope: true,
         replace: true,

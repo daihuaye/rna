@@ -12,7 +12,7 @@ function(
     Device
 ){
     var Gmap = {};
-    
+
     Gmap.restrict = 'A';
 
     Gmap.scope = true;
@@ -25,8 +25,7 @@ function(
                 marker: {
                     values: [{latLng: [37.406109, -122.148778]}],
                     events:{
-                        click: openMarker,
-                        mouseover: openMarker
+                        click: openMarker
                     }
                 }
             },
@@ -35,7 +34,6 @@ function(
                     options: {
                         zoom: 17,
                         mapTypeId: google.maps.MapTypeId.ROADMAP,
-                        // streetViewControl: !Device.device,
                         center: fenway,
                         scrollwheel: false
                     }
