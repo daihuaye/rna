@@ -9,7 +9,7 @@ angular.module('directive.moments', [])
     vm.images = [];
 
     for (var i = 1; i <= MomentsModel.photoNum(); i++) {
-        vm.images.push(i + '.jpg');
+        vm.images.push(i + '.JPG');
     }
 
     ////////////
