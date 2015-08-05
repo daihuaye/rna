@@ -21,7 +21,7 @@ function HomeController($scope, Device, MomentsModel) {
     vm.getClassForMapSection = getClassForMapSection;
     vm.isMobile = isMobile;
     vm.rsvpStyle = {
-        'height': '700px'
+        'height': '800px'
     };
     MomentsModel.photoNum(10);
 

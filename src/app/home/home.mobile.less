@@ -1,5 +1,14 @@
 /* Smartphones (landscape) ----------- */
-@media only screen 
+@media only screen
+and (max-width : @screen-md-min) {
+/* Styles */
+  .parallax img {
+    width: 200% !important;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
 and (max-width : @screen-sm-min) {
 /* Styles */
   header {
@@ -10,10 +19,13 @@ and (max-width : @screen-sm-min) {
   #ra-content .ra-date-separator {
     font-size: 15px;
   }
+  .parallax img {
+    width: 300% !important;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
+@media only screen
 and (max-width : @screen-xs-max) {
 /* Styles */
     header {
@@ -24,4 +36,14 @@ and (max-width : @screen-xs-max) {
         width: 274px;
       }
     }
+  .ra-title {
+    font-size: 22px;
+  }
+  #ra-content .ra-text {
+    font-size: 32px;
+  }
+  .parallax img {
+    width: 350% !important;
+  }
 }
+

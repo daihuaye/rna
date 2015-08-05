@@ -21,6 +21,7 @@ angular
         email: '',
         numberOfadults: 1,
         numberOfChild: 0,
+        allergy: '',
         password: generatePassword()
     };
 
