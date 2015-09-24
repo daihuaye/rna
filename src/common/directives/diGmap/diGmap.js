@@ -60,31 +60,35 @@ function(
             };
         }
 
+        function getInfowindowOption() {
+            var data = "<h5>University Club of Palo Alto</h5>" +
+                        "<p><a href='http://goo.gl/0oJqRs' target='_blank'>3277 Miranda Ave Palo Alto, CA 94304</a></p>" +
+                        "<p><a href='tel:+1-650-493-3972'>(650) 493-3972</a></p>";
+
+            return {
+                infowindow: {
+                    values: [{latLng: [37.406450, -122.148778]}],
+                    options: {
+                        content: data
+                    }
+                }
+            };
+
+        }
+
         function openMarker(marker, event, context) {
             var map = $(this).gmap3("get"),
                 infowindow = $(this).gmap3({
                     get: {
                         name: "infowindow"
                     }
-                }),
-                data = "<h5>University Club of Palo Alto</h5>" +
-                        "<p><a href='http://goo.gl/0oJqRs' target='_blank'>3277 Miranda Ave Palo Alto, CA 94304</a></p>" +
-                        "<p><a href='tel:+1-650-493-3972'>(650) 493-3972</a></p>";
+                });
             if (infowindow) {
                 infowindow.open(map, marker);
-            } else {
-                $(this).gmap3({
-                    infowindow: {
-                        anchor: marker,
-                        options: {
-                            content: data
-                        }
-                    }
-                });
             }
         }
 
-        angular.extend(gmap3Option, markerOption, mapOption, {});
+        angular.extend(gmap3Option, markerOption, mapOption, getInfowindowOption(), {});
         $(element).gmap3(gmap3Option);
     };
 
