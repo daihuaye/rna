@@ -27,7 +27,7 @@ function(
     TimeCountDown.scope = true;
 
     TimeCountDown.link = function link(scope, element, attrs) {
-        var labels = ['MONTHS', 'DAYS', 'HOURS', 'MINUTES', 'SECONDS'],
+        var labels = ['WEEKS', 'DAYS', 'HOURS', 'MINUTES', 'SECONDS'],
         nextYear = '2015/10/10',
         template = _.template($(element).find('#countdown-template').html()),
         currDate = '00:00:00:00:00',
@@ -64,7 +64,7 @@ function(
         });
         // Starts the countdown
         $example.countdown(nextYear, function(event) {
-            var newDate = event.strftime('%m:%d:%H:%M:%S'),
+            var newDate = event.strftime('%w:%d:%H:%M:%S'),
                 data;
             if (newDate !== nextDate) {
                 currDate = nextDate;
