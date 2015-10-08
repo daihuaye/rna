@@ -3,7 +3,7 @@
 
     module.controller('SeatCtrl', SeatCtrl);
 
-    function SeatCtrl(seatdata, Guest, $scope) {
+    function SeatCtrl(seatdata, $scope) {
         var vm = this;
         vm.seatdata = seatdata.data;
         vm.guest = {};
@@ -24,6 +24,5 @@
         }
     }
 })(angular.module('rna.seat', [
-    'rna.seat.autocomplete',
     'kendo.directives'
 ]));
