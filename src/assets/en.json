@@ -4,6 +4,8 @@
     "GALLERY": "GALLERY",
     "GUESTBOOK": "GUESTBOOK",
     "WISHLIST": "WISHLIST",
+    "TIMELINE": "TIMELINE",
+    "SEAT": "SEAT",
     "GROOM": "THE GROOM",
     "BRIDE": "THE BRIDE",
     "F_NAME": "FIRST NAME",
@@ -53,5 +55,9 @@
     "WEDDING_PARTY_DETAIL": "Welcome to join our wedding party. The dinner is buffet style. More detail will be provided in the future.",
     "WEDDING_CEREMONY_DETAIL": "Welcome to my wedding ceremony. Here, we will present the moment of true love in form of wedding ceremony. Please arrive early.",
     "GUESTBOOK_INTRO": "We would love you to sign your name and perhaps you will write a line or two which we can always remember forever. After our wedding day has passed, our memories will always last. For when we look, we will be sure to see loving words from our friends and family.",
-    "ALLERGY": "PLEASE LET US KNOW WHAT YOU ALLERGY TO:"
+    "ALLERGY": "PLEASE LET US KNOW WHAT YOU ALLERGY TO:",
+    "SEAT_INPUT_TITLE": "Find your table using your name:",
+    "ENTER_YOUR_NAME": "Please enter your name",
+    "PEOPLE": "people",
+    "WILL_SEAT_AT": "will be seated at"
 }

@@ -62,11 +62,12 @@ module.exports = {
    */
   vendor_files: {
     js: [
+      'vendor/jquery/dist/jquery.min.js',
       'vendor/angular/angular.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
       'vendor/angular-messages/angular-messages.min.js',
-      'vendor/jquery/dist/jquery.min.js',
+      'vendor/kendo/kendo-core.min.js',
       'vendor/firebase/firebase.js',
       'vendor/angularfire/dist/angularfire.min.js',
       'vendor/lodash/dist/lodash.min.js',

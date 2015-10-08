@@ -64,6 +64,36 @@
             }
         })
 
+        .state('timeline', {
+            url: '/timeline',
+            views: {
+                'main': {
+                    controller: 'TimelineCtrl',
+                    controllerAs: 'timeline',
+                    templateUrl: 'timeline/timeline.tpl.html'
+                }
+            }
+        })
+
+        .state('seat', {
+            url: '/seat',
+            views: {
+                'main': {
+                    controller: 'SeatCtrl',
+                    controllerAs: 'seat',
+                    templateUrl: 'seat/seat.tpl.html'
+                }
+            },
+            resolve: {
+                seatdata: function($http) {
+                    return $http({
+                        method: 'GET',
+                        url: 'assets/seatdata.json'
+                    });
+                }
+            }
+        })
+
         .state('wishlist', {
             url: '/wishlist',
             views: {

@@ -4,6 +4,8 @@
     "GALLERY": "相册",
     "GUESTBOOK": "留言簿",
     "WISHLIST": "愿望清单",
+    "TIMELINE": "时间表",
+    "SEAT": "座位",
     "GROOM": "新郎",
     "BRIDE": "新娘",
     "F_NAME": "名",
@@ -53,5 +55,8 @@
     "WEDDING_PARTY_DETAIL": "欢迎来到我们的婚礼晚宴。晚宴是自助餐形式。更详尽的细节会在未来提供。",
     "WEDDING_CEREMONY_DETAIL": "欢迎来到我们的婚礼典礼。在这，我们将会举行人一生中最宝贵的真爱时刻。请于婚礼典礼开始时稍早些到达。",
     "GUESTBOOK_INTRO": "我们希望您留下您的名字还有对我们祝福，让我们来一直细细回味。",
-    "ALLERGY": "请跟我们说你对什么食物敏感:"
+    "ALLERGY": "请跟我们说你对什么食物敏感:",
+    "SEAT_INPUT_TITLE": "用你的名字来找座位:",
+    "PEOPLE": "人",
+    "WILL_SEAT_AT": "将坐于"
 }

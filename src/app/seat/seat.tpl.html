@@ -1,0 +1,28 @@
+<section class="container ra-seat">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12">
+            <h4>{{ 'SEAT_INPUT_TITLE' | translate }}</h4>
+            <input kendo-auto-complete
+                k-data-source="seat.seatdata"
+                style="width: 100%;"
+                k-data-text-field="'fullName'"
+                k-select="seat.onSelect"
+                k-filter="'contains'"
+                k-placeholder="'Please enter your name'"/>
+        </div>
+    </div>
+    <div class="row ra-result">
+        <div class="col-xs-12 col-md-6 col-md-offset-3" data-ng-if="seat.isFindGuest()">
+            <div class="ra-guest-result">
+                <span class="ra-guest-name">{{seat.guest.fullName}}</span> ({{seat.guest.numberOfPeople}} {{'PEOPLE' | translate}}) {{'WILL_SEAT_AT' | translate}}
+            </div>
+            <div class="ra-guest">
+                <div class="ra-table-top">n</div>
+                <img ng-src="../assets/images/table/table{{seat.guest.table}}.svg" alt="table" class="ra-table-text">
+                <div class="ra-table-bottom">
+                    <span class="ra-table-bottom-left">r</span><span class="ra-table-bottom-right">r</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

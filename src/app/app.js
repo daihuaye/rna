@@ -5,6 +5,8 @@ angular.module('rna', [
     'ui.router',
     'rna.couple',
     'rna.gallery',
+    'rna.timeline',
+    'rna.seat',
     'rna.wishlist',
     'directive.diHeader',
     'directive.diFooter',

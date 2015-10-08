@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="441px" height="297px" viewBox="0 0 441 297" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>A6 - The Menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="A6---The-Menu" sketch:type="MSArtboardGroup">
+            <text id="Hors-d’oeuvres---冷盘" sketch:type="MSTextLayer" font-family="Eurostile" font-size="11" font-weight="bold">
+                <tspan x="46" y="49" fill="#C05D7C">Hors d’oeuvres</tspan>
+                <tspan x="117.822266" y="49" font-size="10" fill="#C05D7C"> - </tspan>
+                <tspan x="125.053711" y="49" font-family="Heiti SC" font-size="9" fill="#C05D7C">冷盘</tspan>
+                <tspan x="143.053711" y="49" font-family="Songti SC" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="46" y="62" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Tempura artichoke hearts</tspan>
+                <tspan x="46" y="76" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Melted Brie with apricot &amp; honey on a crostini</tspan>
+                <tspan x="46" y="90" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Seared duck breast on sweet potato tempura with hoisin sauce</tspan>
+            </text>
+            <text id="Buffet-Dinner--自助餐" sketch:type="MSTextLayer" font-family="Eurostile" font-size="11" font-weight="bold" line-spacing="14">
+                <tspan x="47.32" y="111" fill="#C05D7C">Buffet Dinner</tspan>
+                <tspan x="111.193047" y="111" font-size="10" fill="#C05D7C"> -</tspan>
+                <tspan x="115.924492" y="111" font-family="Heiti SC" font-size="9" fill="#C05D7C">自助餐</tspan>
+                <tspan x="142.924492" y="111" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="47.32" y="125" font-family="Songti SC" font-size="10" fill="#605F64">Salads - </tspan>
+                <tspan x="81.59" y="125" font-family="Songti SC" font-size="9" fill="#605F64">沙拉</tspan>
+                <tspan x="99.59" y="125" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="46" y="138.639954" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Cobb salad</tspan>
+                <tspan x="97.296" y="136.767944" font-family="Songti SC" font-size="12" font-weight="normal" fill="#605F64"> </tspan>
+                <tspan x="100.824" y="139" font-family="Songti SC" font-size="8" font-weight="normal" fill="#605F64">(iceberg lettuce, tomato, smoked bacon, chopped egg &amp; blue cheese dressing)</tspan>
+                <tspan x="350.24" y="139" font-family="Songti SC" font-size="12" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="46" y="152.639954" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Roast beet salad</tspan>
+                <tspan x="118.356" y="150.767944" font-family="Songti SC" font-size="12" font-weight="normal" fill="#605F64"> </tspan>
+                <tspan x="121.884" y="153" font-family="Songti SC" font-size="8" font-weight="normal" fill="#605F64">(mixed greens, red onions, roasted mushroomms, roasted beets &amp; raspberry vinaigrette)</tspan>
+                <tspan x="405.884" y="153" font-family="Songti SC" font-size="12" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="47.32" y="167" font-family="Songti SC" font-size="10" fill="#605F64">Starch - </tspan>
+                <tspan x="81.54" y="167" font-family="Songti SC" font-size="9" fill="#605F64">主食</tspan>
+                <tspan x="99.54" y="167" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="47.32" y="181" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- White Rice</tspan>
+                <tspan x="47.32" y="195" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Penne with sun dried tomatoes and pesto cream sauce</tspan>
+                <tspan x="47.32" y="209" font-family="Songti SC" font-size="10" fill="#605F64">Veggies - </tspan>
+                <tspan x="86.1" y="209" font-family="Songti SC" font-size="9" fill="#605F64">配菜</tspan>
+                <tspan x="104.1" y="209" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="47.32" y="223" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Mixed medley with zucchini, yellow squash &amp; carrots</tspan>
+                <tspan x="47.32" y="237" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Baby carrots and asparagus</tspan>
+                <tspan x="47.32" y="251" font-family="Songti SC" font-size="10" fill="#605F64">Entrees - </tspan>
+                <tspan x="86.58" y="251" font-family="Songti SC" font-size="9" fill="#605F64">主餐</tspan>
+                <tspan x="104.58" y="251" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64"></tspan>
+                <tspan x="47.32" y="265" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Garlic and red wine marinated tri-tip with mushroom Demi glace.</tspan>
+                <tspan x="46" y="278.639954" font-family="Songti SC" font-size="10" font-weight="normal" fill="#605F64">- Baked salmon filet</tspan>
+                <tspan x="127.246" y="276.767944" font-family="Songti SC" font-size="12" font-weight="normal" fill="#605F64"> </tspan>
+                <tspan x="130.774" y="279" font-family="Songti SC" font-size="8" font-weight="normal" fill="#605F64">(saffron cheever, butter and mango salsa)</tspan>
+            </text>
+            <text id="n" sketch:type="MSTextLayer" font-family="NeoclassicFleuronsFree" font-size="41" font-weight="normal" fill="#000000">
+                <tspan x="195" y="30">n</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
