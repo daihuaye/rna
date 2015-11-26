@@ -58,5 +58,8 @@
     "ALLERGY": "请跟我们说你对什么食物敏感:",
     "SEAT_INPUT_TITLE": "用你的名字来找座位:",
     "PEOPLE": "人",
-    "WILL_SEAT_AT": "将坐于"
+    "WILL_SEAT_AT": "将坐于",
+    "HAVE_MARRIED_FOR": "已经结婚了",
+    "SINCE": "自从",
+    "NO_AVAILIABLE": "预约已经结束，谢谢！"
 }

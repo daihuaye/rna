@@ -59,5 +59,8 @@
     "SEAT_INPUT_TITLE": "Find your table using your name:",
     "ENTER_YOUR_NAME": "Please enter your name",
     "PEOPLE": "people",
-    "WILL_SEAT_AT": "will be seated at"
+    "WILL_SEAT_AT": "will be seated at",
+    "HAVE_MARRIED_FOR": "Have married for",
+    "SINCE": "Since",
+    "NO_AVAILIABLE": "The rsvp is end, thank you!"
 }
