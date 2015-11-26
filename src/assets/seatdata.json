@@ -1,5 +1,15 @@
 [
     {
+        "fullName":"Chaojin (Daddy) Ye",
+        "numberOfPeople":"2",
+        "table":"2"
+    },
+    {
+        "fullName":"Liujiao (Mommy) Yang",
+        "numberOfPeople":"2",
+        "table":"2"
+    },
+    {
         "fullName":"Junhong Frank Lin",
         "numberOfPeople":"5",
         "table":"4"
@@ -31,7 +41,7 @@
     },
     {
         "fullName":"Viet Trinh",
-        "numberOfPeople":"1",
+        "numberOfPeople":"2",
         "table":"6"
     },
     {
@@ -101,7 +111,7 @@
     },
     {
         "fullName":"Haripriyaa Ganesan",
-        "numberOfPeople":"1",
+        "numberOfPeople":"2",
         "table":"9"
     },
     {
@@ -180,12 +190,12 @@
         "table":"1"
     },
     {
-        "fullName":"Lei Zhang",
+        "fullName":"Lei (Mommy) Zhang",
         "numberOfPeople":"2",
         "table":"1"
     },
     {
-        "fullName":"Rong Zhao",
+        "fullName":"Rong (Daddy) Zhao",
         "numberOfPeople":"2",
         "table":"1"
     },
@@ -265,18 +275,63 @@
         "table":"5"
     },
     {
-        "fullName":"Michielle Langley",
-        "numberOfPeople":"2",
-        "table":"5"
-    },
-    {
         "fullName":"Christine Chung",
         "numberOfPeople":"2",
         "table":"5"
     },
     {
-        "fullName":"",
-        "numberOfPeople":"",
-        "table":""
+        "fullName":"Brenda Godinez",
+        "numberOfPeople":"2",
+        "table":"8"
+    },
+    {
+        "fullName": "Pedrito Estrada",
+        "numberOfPeople": "2",
+        "table": "7"
+    },
+    {
+        "fullName": "Stephen Demarco",
+        "numberOfPeople": "2",
+        "table": "7"
+    },
+    {
+        "fullName": "Rosario Rose",
+        "numberOfPeople": "1",
+        "table": "7"
+    },
+    {
+        "fullName": "Susanne Wong",
+        "numberOfPeople": "1",
+        "table": "7"
+    },
+    {
+        "fullName": "Susan Woo",
+        "numberOfPeople": "1",
+        "table": "7"
+    },
+    {
+        "fullName": "Gracie Nguyen",
+        "numberOfPeople": "1",
+        "table": "7"
+    },
+    {
+        "fullName": "Wei Zhang",
+        "numberOfPeople": "1",
+        "table": "5"
+    },
+    {
+        "fullName": "Balijit Atwal",
+        "numberOfPeople": "4",
+        "table": "7"
+    },
+    {
+        "fullName": "Jenny Domingus",
+        "numberOfPeople": "2",
+        "table": "8"
+    },
+    {
+        "fullName": "Binh Tran",
+        "numberOfPeople": "1",
+        "table": "5"
     }
 ]

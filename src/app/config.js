@@ -88,7 +88,7 @@
                 seatdata: function($http) {
                     return $http({
                         method: 'GET',
-                        url: 'assets/seatdata.json'
+                        url: 'https://s3.amazonaws.com/rna.com/seatdata.json'
                     });
                 }
             }

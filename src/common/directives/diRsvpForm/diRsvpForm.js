@@ -11,6 +11,7 @@ angular
 ])
 .controller('RsvpCtrl', function(HomeModel, $scope, $analytics) {
     var vm = this;
+    var deadline = (new Date('2015/10/10')).getTime();
     vm.submitRsvp = submitRsvp;
     vm.interacted = interacted;
     vm.submitted = false;
@@ -27,7 +28,8 @@ angular
 
     function submitRsvp(field) {
         vm.submitted = true;
-        if (Object.keys(field.$error).length === 0) {
+        var currentTime = (new Date()).getTime();
+        if (Object.keys(field.$error).length === 0 && currentTime < deadline) {
             HomeModel
                 .rsvp(vm.rsvp)
                 .then(function(data) {

@@ -9,7 +9,7 @@
 
     function HomeModel($firebase, $q, $http) {
         var url = 'https://rna.firebaseio.com/';
-        var ref = new Firebase("https://rna.firebaseio.com");
+        var ref = new Firebase(url);
         var schema = {
             rsvp: []
         };

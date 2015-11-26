@@ -9,6 +9,7 @@
         vm.guest = {};
         vm.isFindGuest = isFindGuest;
         vm.onSelect = onSelect;
+        vm.reset = reset;
 
         function isFindGuest() {
             return angular.isDefined(vm.guest) && vm.guest.fullName;
@@ -21,6 +22,11 @@
             if (!$scope.$$phase) {
                 $scope.$apply();
             }
+        }
+
+        function reset() {
+            vm.guest = {};
+            $('.ra-autocomplete input').val('');
         }
     }
 })(angular.module('rna.seat', [

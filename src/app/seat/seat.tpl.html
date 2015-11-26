@@ -3,11 +3,13 @@
         <div class="col-md-6 col-md-offset-3 col-xs-12">
             <h4>{{ 'SEAT_INPUT_TITLE' | translate }}</h4>
             <input kendo-auto-complete
+                class="ra-autocomplete"
                 k-data-source="seat.seatdata"
                 style="width: 100%;"
                 k-data-text-field="'fullName'"
                 k-select="seat.onSelect"
                 k-filter="'contains'"
+                k-min-length="'2'"
                 k-placeholder="'Please enter your name'"/>
         </div>
     </div>
@@ -22,6 +24,9 @@
                 <div class="ra-table-bottom">
                     <span class="ra-table-bottom-left">r</span><span class="ra-table-bottom-right">r</span>
                 </div>
+            </div>
+            <div class="ra-reset">
+                <button class="btn btn-primary ra-seat-reset" data-ng-click="seat.reset()">Reset</button>
             </div>
         </div>
     </div>
