@@ -44,27 +44,23 @@ angular.module('directive.moments', [])
     //////////
 
     function link(scope, element, attrs) {
-        $timeout(function() {
-            $(element).waitForImages(loadGallery);
-        });
-
-        //////////
-
-        function loadGallery() {
-            $(element).justifiedGallery({
-                lastRow : 'nojustify',
-                rowHeight : 200,
-                rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
-                margins : 1
-            }).on('jg.complete', function () {
-                $(this).find('a').colorbox({
+        $timeout(function () {
+            var $grid = $(element).masonry({
+                itemSelector: '.grid-item'
+            });
+            $grid.imagesLoaded().progress(function () {
+                $grid.masonry('layout');
+            });
+            $grid.one( 'layoutComplete', function() {
+                $(this).find('img').colorbox({
                     maxWidth : '100%',
                     maxHeight : '100%',
                     opacity : 0.8,
                     transition : 'elastic',
-                    current : ''
+                    current : '',
+                    rel: 'grid-item'
                 });
             });
-        }
+        });
     }
 });

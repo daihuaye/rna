@@ -75,12 +75,10 @@ module.exports = {
       'vendor/jquery-backstretch/jquery.backstretch.min.js',
       'vendor/jquery.plugin/jquery.plugin.js',
       'vendor/jquery.countdown/dist/jquery.countdown.js',
-      'vendor/Justified-Gallery/dist/js/jquery.justifiedGallery.min.js',
       'vendor/gmap3/dist/gmap3.min.js',
       'vendor/colorbox/jquery.colorbox.js',
       'vendor/imagesloaded/imagesloaded.pkgd.min.js',
       'vendor/angular-touch/angular-touch.min.js',
-      'vendor/waitForImages/dist/jquery.waitforimages.min.js',
       'vendor/angular-translate/angular-translate.min.js',
       'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
       'vendor/ngstorage/ngStorage.min.js',
@@ -89,7 +87,8 @@ module.exports = {
       'vendor/velocity/velocity.ui.min.js',
       'vendor/angular-animate/angular-animate.min.js',
       'vendor/angulartics/dist/angulartics.min.js',
-      'vendor/angulartics-google-analytics/dist/angulartics-google-analytics.min.js'
+      'vendor/angulartics-google-analytics/dist/angulartics-google-analytics.min.js',
+      'vendor/masonry/dist/masonry.pkgd.min.js',
     ],
     css: [
     ],
