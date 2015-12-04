@@ -89,6 +89,7 @@ module.exports = {
       'vendor/angulartics/dist/angulartics.min.js',
       'vendor/angulartics-google-analytics/dist/angulartics-google-analytics.min.js',
       'vendor/masonry/dist/masonry.pkgd.min.js',
+      'vendor/ngInfiniteScroll/build/ng-infinite-scroll.min.js'
     ],
     css: [
     ],

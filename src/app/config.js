@@ -61,6 +61,11 @@
                     controllerAs: 'gallery',
                     templateUrl: 'gallery/gallery.tpl.html'
                 }
+            },
+            resolve: {
+                photoNames: function ($http) {
+                    return $http.get('assets/wedding-photos.json');
+                }
             }
         })
 

@@ -30,6 +30,7 @@
     "angulartics": "~0.19.0",
     "angulartics-google-analytics": "~0.1.1",
     "masonry": "~3.3.2",
+    "ngInfiniteScroll": "1.0.0"
   },
   "dependencies": {}
 }

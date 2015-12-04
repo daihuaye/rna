@@ -16,14 +16,16 @@ angular.module('rna.home', [
 ])
 .controller('HomeCtrl', HomeController);
 
-function HomeController($scope, Device, MomentsModel) {
+function HomeController($scope, Device) {
     var vm = this;
     vm.getClassForMapSection = getClassForMapSection;
     vm.isMobile = isMobile;
     vm.rsvpStyle = {
         'height': '800px'
     };
-    MomentsModel.photoNum(10);
+    vm.photos = _.map([1,2,3,4,5,6,7,8,9,10], function(num) {
+        return "assets/images/our-story-images/" + num + '.JPG';
+    });
 
     $scope.$on('rsvp.submitSuccess', function (event, data) {
         $scope.$broadcast('notification.success', data);
