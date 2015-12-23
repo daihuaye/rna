@@ -9,7 +9,7 @@ angular.module('directive.moments', [])
 
     ////////////
 })
-.directive('moments', function($document){
+.directive('moments', function($document, $timeout){
     return {
         controller: 'MomentsCtrl',
         controllerAs: 'vm',
@@ -26,29 +26,35 @@ angular.module('directive.moments', [])
 
     function link(scope, element, attrs, controller) {
         var $grid;
-        var busy = false;
+        scope.busy = true;
         var cbox_open = false;
         var index = 0;
         function initWithMasonry() {
             $grid = $(element).masonry({
                 itemSelector: '.grid-item'
             });
-            $grid.imagesLoaded().progress(function () {
-                $grid.masonry('layout');
+            $grid.imagesLoaded().done(function () {
+                $timeout(function() {
+                    $grid.masonry('layout');
+                });
+                scope.busy = false;
+                scope.$emit('moment_images_loaded');
+                apply();
             });
             $grid.one( 'layoutComplete', function() {
                 initColorbox($(this).find('img'));
             });
         }
 
-        function initColorbox($img, opt) {
+        function initColorbox($img, opt, callback) {
             var options = {
                 maxWidth : '100%',
                 maxHeight : '100%',
                 opacity : 0.8,
                 transition : 'elastic',
                 current : '',
-                rel: 'grid-item'
+                rel: 'grid-item',
+                onComplete: callback
             };
             if (opt) {
                 angular.extend(options, opt);
@@ -63,6 +69,7 @@ angular.module('directive.moments', [])
                     .prop('src', photoUrl)
                     .attr('href', photoUrl)
                     .data('index', index)
+                    .addClass('image-loading')
                     .addClass('grid-item')[0];
             });
             element.append(listItems);
@@ -70,23 +77,31 @@ angular.module('directive.moments', [])
         }
 
         scope.$on('NextImages', function(event, data) {
-            if (!busy) {
-                busy = true;
+            if (!scope.busy) {
+                scope.busy = true;
                 var item = addImagesToMasonry(data);
                 $grid.masonry('appended', item);
                 initColorbox($(item));
-                $(item).imagesLoaded().progress(function () {
-                    $grid.masonry('layout');
-                    busy = false;
-                    if (cbox_open) {
-                        $.colorbox.next();
-                    }
+                $(item).imagesLoaded().done(function () {
+                    $timeout(function() {
+                        $grid.masonry('layout');
+                    });
+                    scope.busy = false;
+                    apply();
+                    scope.$emit('moment_images_loaded');
+
                 });
             }
         });
 
-        $document.on('mousedown', 'button#cboxNext', function(event) {
-            scope.$emit('cbox_next');
+        function apply() {
+            if (!scope.$$phase) {
+                scope.$apply();
+            }
+        }
+
+        $document.on('mousedown', 'button#cboxNext', function(e) {
+            scope.$emit('cbox_next', e);
         });
 
         $document.bind('cbox_open', function() {
@@ -97,10 +112,16 @@ angular.module('directive.moments', [])
             cbox_open = false;
         });
 
-        $document.bind('keydown.moments', function(e) {
+        scope.$watch('busy', function() {
+            if (!scope.busy) {
+                $('.image-loading').removeClass('image-loading');
+            }
+        });
+
+        $('body').bind('keydown.cbox', function(e) {
             var key = e.keyCode;
             if(cbox_open && key === 39 && !e.altKey) {
-                scope.$emit('cbox_next');
+                scope.$emit('cbox_next', e);
             }
         });
 

@@ -13,29 +13,43 @@
         var vm = this;
         var imageIndex = 0;
         var names = _.map(photoNames.data, function(name) {
-            return "assets/images/wedding-photos/" + name;
+            // return "http://res.cloudinary.com/daihuay/image/upload/c_scale,w_750/v1450661958/wedding/" + name;
+            return "http://rna.com.s3.amazonaws.com/wedding/" + name;
         });
         vm.wedding = new WeddingPhotos(names);
-        vm.next = function() {
+        vm.isBusy = false;
+        vm.next = function next() {
             var photos = vm.wedding.Next();
-            $scope.$broadcast('NextImages', photos);
+            if (photos.length > 0) {
+                vm.isBusy = true;
+                $scope.$broadcast('NextImages', photos);
+            }
         };
 
         $document.bind('cbox_complete', function(e) {
             var el = $.colorbox.element();
             imageIndex = el.data('index');
+            nextImage();
         });
 
-        $scope.$on('cbox_next', function() {
-            var max = $('.ra-justified-gallery').find('img').length;
-            if (imageIndex + 1 > max) {
+        $scope.$on('cbox_next', function(event, data) {
+            nextImage();
+        });
+
+        $scope.$on('moment_images_loaded', function() {
+            vm.isBusy = false;
+        });
+
+        function nextImage() {
+            var max = $('.ra-gallery').find('img').length;
+            if(imageIndex + 5 >= max) {
                 vm.next();
             }
-        });
+        }
     }
 
     function WeddingPhotos() {
-        var delta = 1;
+        var delta = 10;
         var Photos = function (items) {
             this.items = items;
             this.nextNum = 11;
@@ -49,7 +63,6 @@
             this.photos = _.union(this.photos, nextPhotos);
             return nextPhotos;
         };
-
         return Photos;
     }
 })();
