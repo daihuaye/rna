@@ -22,10 +22,10 @@ function(
     Backstrecth.link = function link(scope, element, attrs) {
 
         $(element).backstretch([
-            'assets/images/home-sliding-images/sliding1.JPG',
-            'assets/images/home-sliding-images/sliding2.JPG',
-            'assets/images/home-sliding-images/sliding3.JPG',
-            'assets/images/home-sliding-images/sliding4.JPG'
+            'http://rna.com.s3.amazonaws.com/yeswemarry/home-sliding-images/sliding1.JPG',
+            'http://rna.com.s3.amazonaws.com/yeswemarry/home-sliding-images/sliding2.JPG',
+            'http://rna.com.s3.amazonaws.com/yeswemarry/home-sliding-images/sliding3.JPG',
+            'http://rna.com.s3.amazonaws.com/yeswemarry/home-sliding-images/sliding4.JPG'
         ], {duration: 3000, fade: 750, centeredY: false});
 
         if (Device.device) {

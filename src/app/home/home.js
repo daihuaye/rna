@@ -24,7 +24,7 @@ function HomeController($scope, Device) {
         'height': '800px'
     };
     vm.photos = _.map([1,2,3,4,5,6,7,8,9,10], function(num) {
-        return "assets/images/our-story-images/" + num + '.JPG';
+        return "http://rna.com.s3.amazonaws.com/yeswemarry/our-story-images/" + num + '.JPG';
     });
 
     $scope.$on('rsvp.submitSuccess', function (event, data) {
