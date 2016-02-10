@@ -29,7 +29,17 @@
                     </ul>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="gallery">{{'GALLERY' | translate}}</a>
+                    <a href=""
+                        id="gallery-drop-down"
+                        class="dropdown-toggle"
+                        data-toggle="dropdown"
+                        role="button"
+                        aria-expanded="false">{{'GALLERY' | translate}}
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ui-sref="gallery({type: 'photos'})">{{'PHOTOS' | translate}}</a></li>
+                        <li><a ui-sref="gallery({type: 'videos'})">{{'VIDEOS' | translate}}</a></li>
+                    </ul>
                 </li>
                 <li ui-sref-active="active">
                     <a ui-sref="guestbook">{{'GUESTBOOK' | translate}}</a>
