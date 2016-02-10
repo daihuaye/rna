@@ -54,7 +54,7 @@
         })
 
         .state('gallery', {
-            url: '/gallery',
+            url: '/gallery/:type',
             views: {
                 'main': {
                     controller: 'GalleryCtrl',

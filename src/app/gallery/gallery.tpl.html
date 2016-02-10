@@ -1,5 +1,28 @@
 <div class="container ra-gallery">
-    <div class="ra-page" infinite-scroll="gallery.next()" infinite-scroll-disabled="gallery.isBusy">
-        <moments class="ra-js-justifiedgallery" photos="gallery.wedding.photos" ></moments>
+    <div ng-switch on="gallery.getWhichPage()">
+        <div class="ra-page" ng-switch-when="photos" infinite-scroll="gallery.next()" infinite-scroll-disabled="gallery.isBusy">
+            <moments class="ra-js-justifiedgallery" photos="gallery.wedding.photos" ></moments>
+        </div>
+        <div ng-switch-when="videos">
+            <div data-ng-if="!gallery.isAuth()">
+                <form class="ra-sign-in-form">
+                    <div class="ra-sign-in-text">To view the videos, please sign in with Google</div>
+                    <button data-ng-click="gallery.googleLogin()" class="ra-g-login-btn">
+                        <img src="http://rna.com.s3.amazonaws.com/yeswemarry/g-logo.png" alt="g logo">
+                        <span>Sign in with Google</span>
+                    </button>
+                </form>
+            </div>
+            <div data-ng-if="gallery.isAuth()">
+                <ul>
+                    <li data-ng-repeat="link in gallery.getVideoLinks()">
+                        <video controls class="wedding-video">
+                            <source ng-src="{{gallery.getLink(link)}}">
+                            Your browser doesn't support HTML5 video tag.
+                        </video>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
