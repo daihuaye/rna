@@ -4,13 +4,14 @@
     angular
         .module('rna.gallery', [
             'directive.moments',
+            'directive.diAtom',
             'infinite-scroll'
         ])
         .controller('GalleryCtrl', GalleryCtrl)
         .factory('WeddingPhotos', WeddingPhotos)
         .factory('WeddingVideos', WeddingVideos);
 
-    WeddingVideos.$inject = ['$http', '$firebaseAuth', '$firebaseObject'];
+    WeddingVideos.$inject = ['$http', '$firebaseAuth', '$firebaseObject', '$state'];
 
     function GalleryCtrl($state, photoNames, WeddingPhotos, $scope, $document, WeddingVideos, $sce) {
         var vm = this;
@@ -24,8 +25,10 @@
         vm.getWhichPage = getWhichPage;
         vm.googleLogin = googleLogin;
         vm.isAuth = isAuth;
-        vm.getVideoLinks = getVideoLinks;
-        vm.getLink = getLink;
+        vm.getVideos = getVideos;
+        vm.isVideoSelected = isVideoSelected;
+        vm.getSelectedVideoLink = getSelectedVideoLink;
+        vm.onVideoClose = onVideoClose;
         vm.next = function next() {
             var photos = vm.wedding.Next();
             if (photos.length > 0) {
@@ -71,12 +74,32 @@
             return vm.videos.isAuth();
         }
 
-        function getVideoLinks() {
-            return vm.videos.getLinks();
+        function getVideos() {
+            return vm.videos.getVideoObjects();
         }
 
         function getLink(url) {
             return $sce.trustAsResourceUrl(url);
+        }
+
+        function isVideoSelected() {
+            return _.some(getVideos(), function(video) {
+                return video.isSelected;
+            });
+        }
+
+        function getSelectedVideoLink() {
+            var selectedVideo = _.find(getVideos(), function(video) {
+                return video.isSelected;
+            });
+            return getLink(selectedVideo.video);
+        }
+
+        function onVideoClose() {
+            var selectedVideo = _.find(getVideos(), function(video) {
+                return video.isSelected;
+            });
+            selectedVideo.isSelected = false;
         }
     }
 
@@ -98,11 +121,11 @@
         return Photos;
     }
 
-    function WeddingVideos($http, $firebaseAuth, $firebaseObject) {
+    function WeddingVideos($http, $firebaseAuth, $firebaseObject, $state) {
         var ref = new Firebase("https://rna.firebaseio.com");
         var authObj = $firebaseAuth(ref);
         var user = {};
-        var videoLinks = [];
+        var videos = [];
 
         var Videos = function () {
 
@@ -114,8 +137,8 @@
             $state.go('home');
         };
 
-        Videos.prototype.getLinks = function() {
-            return videoLinks;
+        Videos.prototype.getVideoObjects = function() {
+            return videos.data;
         };
 
         Videos.prototype.isAuth = function() {
@@ -126,23 +149,19 @@
             authObj.$authWithOAuthPopup("google", {scope: "email"})
             .then(function(authData) {
                 if (authData) {
-                    console.log("Authenticated successfully with provider " + provider +" with payload:", authData);
+                    console.log("Authenticated successfully with provider google!");
                 }
             }, function (error) {
                 console.error("Authentication failed:", error);
             });
         };
 
-        function getVideoLinks() {
-            videoLinks = $firebaseObject(ref.child('videoLinks'));
-            videoLinks.$loaded().then(function() {
-                var links = _.filter(videoLinks, function(link) {
-                    if (angular.isString(link)) {
-                        return link.indexOf('http') >= 0;
-                    }
-                    return false;
+        function getVideos() {
+            videos = $firebaseObject(ref.child('videos'));
+            videos.$loaded().then(function() {
+                return _.map(videos.data, function(video) {
+                    return _.extend(video, {isSelected: false});
                 });
-                return links;
             });
         }
 
@@ -154,11 +173,12 @@
                         var newUser = {};
                         if (authData.google) {
                             newUser.name = authData.google.displayName;
+                            newUser.email = authData.google.email;
                         }
                         user.$ref().set(newUser);
                     }
                 });
-                getVideoLinks();
+                getVideos();
             }
         }
 

@@ -1,4 +1,5 @@
 .gallery {
+  position: relative;
   background-color: #f9f9f9;
   font-family: 'Roboto', sans-serif;
   .ra-gallery {
@@ -7,8 +8,23 @@
     }
   }
   .wedding-video {
-    width: 100%;
-    margin: 30px 0;
+    width: 90%;
+    max-width: 890px;
+    margin: 150px 0;
+  }
+  .ra-video-close-button {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    padding: 0;
+    line-height: 1;
+    font-size: 70px;
+    color: #EFEAE1;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-family: @special-family1;
   }
   .ra-sign-in-form {
     height: 300px;
@@ -36,5 +52,15 @@
   }
   .ra-sign-in-text {
     padding-bottom: 10px;
+  }
+  .video-mode {
+    z-index: 10;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #272424;
   }
 }
