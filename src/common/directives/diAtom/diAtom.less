@@ -1,64 +1,78 @@
-.center {
-  width: 500px;
-  height: 500px;
-  position: relative;
-}
+@inner-satellite-size: 240px;
+@inner-satellite-object: 30px;
+@inner-satellite-padding: @inner-satellite-object / 2;
 
-.centerMe() {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
+@outer-satellite-size: 320px;
+@outer-satellite-object: 40px;
+@outer-satellite-padding: @outer-satellite-object / 2;
 
-.video {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: lightblue;
-  z-index: 2;
-  .centerMe();
-  cursor: pointer;
-  &:before {
-    content: '';
-    width: 56px;
-    height: 56px;
-    .centerMe();
-    display: inline-block;
-    background-image: url('http://rna.com.s3.amazonaws.com/yeswemarry/videos/video-play.png');
+@video-size: 200px;
+
+.di-atom {
+  &.center {
+    width: @outer-satellite-size;
+    height: @outer-satellite-size;
+    position: relative;
   }
-}
 
-.satellite {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background: none;
-  padding: 14px;
-  border: 5px solid LightGray;
-  z-index: 1;
-  animation: spin 5s infinite linear;
-  .centerMe();
-  &:before {
-    content: '';
-    width: 30px;
-    height: 30px;
+  .centerMe() {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .video {
+    width: @video-size;
+    height: @video-size;
     border-radius: 50%;
-    background: LightCoral;
-    display: inline-block;
+    background: lightblue;
+    z-index: 2;
+    .centerMe();
+    cursor: pointer;
+    &:before {
+      content: '';
+      width: 56px;
+      height: 56px;
+      .centerMe();
+      display: inline-block;
+      background-image: url('http://rna.com.s3.amazonaws.com/yeswemarry/videos/video-play.png');
+    }
   }
-}
 
-.outer {
-  width: 320px;
-  height: 320px;
-  padding: 20px;
-  animation: spin 8s infinite linear;
-  &:before {
-    width: 40px;
-    height: 40px;
+  .satellite {
+    width: @inner-satellite-size;
+    height: @inner-satellite-size;
+    border-radius: 50%;
+    background: none;
+    padding: 14px;
+    border: 5px solid #ffb21e;
+    z-index: 1;
+    animation: spin 5s infinite linear;
+    .centerMe();
+    &:before {
+      content: '';
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: LightCoral;
+      display: inline-block;
+    }
+  }
+
+  .outer {
+    width: @outer-satellite-size;
+    height: @outer-satellite-size;
+    border-width: 3px;
+    border-color: #00adef;
+    padding: 20px;
+    animation: spin 8s infinite linear;
+    &:before {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 

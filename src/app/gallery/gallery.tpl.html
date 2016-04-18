@@ -1,10 +1,10 @@
-<div class="container ra-gallery">
-    <div ng-switch on="gallery.getWhichPage()">
+<div class="ra-gallery">
+    <div ng-switch on="gallery.getWhichPage()" ng-hide="gallery.isVideoSelected()" ng-class="{container: gallery.getWhichPage() === 'photos'}">
         <div class="ra-page" ng-switch-when="photos" infinite-scroll="gallery.next()" infinite-scroll-disabled="gallery.isBusy">
             <moments class="ra-js-justifiedgallery" photos="gallery.wedding.photos" ></moments>
         </div>
         <div ng-switch-when="videos">
-            <div data-ng-if="!gallery.isAuth()">
+            <div data-ng-if="!gallery.isAuth()" class="galaxy">
                 <form class="ra-sign-in-form">
                     <div class="ra-sign-in-text">To view the videos, please sign in with Google</div>
                     <button data-ng-click="gallery.googleLogin()" class="ra-g-login-btn">
@@ -14,9 +14,16 @@
                 </form>
             </div>
             <div data-ng-if="gallery.isAuth()">
-                <ul>
-                    <li data-ng-repeat="video in gallery.getVideos()">
+                <ul class="gallery-video-ul">
+                    <li data-ng-repeat="video in gallery.getVideos()" class="{{'video' + $index}}">
                         <di-atom video="video"></di-atom>
+                    </li>
+                    <li class="video1">
+                        <div class="di-atom center">
+                            <div class="video"></div>
+                            <div class="satellite"></div>
+                            <div class="satellite outer"></div>
+                        </div>
                     </li>
                 </ul>
             </div>

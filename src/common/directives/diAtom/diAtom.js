@@ -28,6 +28,9 @@
         //////////////
 
         function link(scope, element, attrs) {
+            if (scope.video.thumbnail) {
+                element.find('.video').css('background-image', scope.video.thumbnail);
+            }
         }
     }
 })();
