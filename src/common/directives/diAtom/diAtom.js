@@ -29,7 +29,8 @@
 
         function link(scope, element, attrs) {
             if (scope.video.thumbnail) {
-                element.find('.video').css('background-image', scope.video.thumbnail);
+                var url = "url(" + scope.video.thumbnail + ") center";
+                element.find('.video').css('background', url);
             }
         }
     }

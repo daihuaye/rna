@@ -62,5 +62,7 @@
     "WILL_SEAT_AT": "will be seated at",
     "HAVE_MARRIED_FOR": "Have married for",
     "SINCE": "Since",
-    "NO_AVAILIABLE": "The rsvp is end, thank you!"
+    "NO_AVAILIABLE": "The rsvp is end, thank you!",
+    "SIGN_IN_DESC": "Due to copyright issue, please sign in and then enjoy short film of my wedding.",
+    "SIGN_IN_GOOGLE": "Sign in with Google"
 }

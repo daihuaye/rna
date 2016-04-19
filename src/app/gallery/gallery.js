@@ -29,6 +29,7 @@
         vm.isVideoSelected = isVideoSelected;
         vm.getSelectedVideoLink = getSelectedVideoLink;
         vm.onVideoClose = onVideoClose;
+        vm.getPoster = getPoster;
         vm.next = function next() {
             var photos = vm.wedding.Next();
             if (photos.length > 0) {
@@ -100,6 +101,13 @@
                 return video.isSelected;
             });
             selectedVideo.isSelected = false;
+        }
+
+        function getPoster() {
+            var selectedVideo = _.find(getVideos(), function(video) {
+                return video.isSelected;
+            });
+            return selectedVideo.poster;
         }
     }
 

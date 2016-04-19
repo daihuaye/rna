@@ -6,10 +6,10 @@
         <div ng-switch-when="videos">
             <div data-ng-if="!gallery.isAuth()" class="galaxy">
                 <form class="ra-sign-in-form">
-                    <div class="ra-sign-in-text">To view the videos, please sign in with Google</div>
+                    <div class="ra-sign-in-text">{{ 'SIGN_IN_DESC' | translate }}</div>
                     <button data-ng-click="gallery.googleLogin()" class="ra-g-login-btn">
                         <img src="http://rna.com.s3.amazonaws.com/yeswemarry/g-logo.png" alt="g logo">
-                        <span>Sign in with Google</span>
+                        <span>{{'SIGN_IN_GOOGLE' | translate }}</span>
                     </button>
                 </form>
             </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="video-mode" data-ng-if="gallery.isVideoSelected()">
         <button class="ra-video-close-button" ng-click="gallery.onVideoClose()">x</button>
-        <video controls class="wedding-video" preload="metadata">
+        <video controls class="wedding-video" preload="metadata" poster="https://s3.amazonaws.com/rna.com/yeswemarry/videos/short-film-poster.jpg">
             <source ng-src="{{gallery.getSelectedVideoLink()}}">
             Your browser doesn't support HTML5 video tag.
         </video>
