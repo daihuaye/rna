@@ -62,6 +62,8 @@
     "HAVE_MARRIED_FOR": "已经结婚了",
     "SINCE": "自从",
     "NO_AVAILIABLE": "预约已经结束，谢谢！",
-    "SIGN_IN_DESC": "由于版权问题，请登录后享受我的婚礼短片。",
-    "SIGN_IN_GOOGLE": "请用谷歌登录"
+    "SIGN_IN_DESC": "请登录后享受我的婚礼短片。",
+    "SIGN_IN_GOOGLE": "请用谷歌登录",
+    "VIDEOS": "视频",
+    "PHOTOS": "相片"
 }
