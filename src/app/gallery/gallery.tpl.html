@@ -31,7 +31,7 @@
     </div>
     <div class="video-mode" data-ng-if="gallery.isVideoSelected()">
         <button class="ra-video-close-button" ng-click="gallery.onVideoClose()">x</button>
-        <video controls class="wedding-video" preload="metadata" poster="https://s3.amazonaws.com/rna.com/yeswemarry/videos/short-film-poster.jpg">
+        <video controls class="wedding-video" preload="metadata" preload="auto" poster="https://s3.amazonaws.com/rna.com/yeswemarry/videos/short-film-poster.jpg">
             <source ng-src="{{gallery.getSelectedVideoLink()}}">
             Your browser doesn't support HTML5 video tag.
         </video>

@@ -5,7 +5,8 @@
         .module('rna.gallery', [
             'directive.moments',
             'directive.diAtom',
-            'infinite-scroll'
+            'infinite-scroll',
+            'ngAnimate'
         ])
         .controller('GalleryCtrl', GalleryCtrl)
         .factory('WeddingPhotos', WeddingPhotos)
